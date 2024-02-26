@@ -133,7 +133,7 @@ const FooterPage = () => {
         <div className="third-div">
           <text className="support-text">Support</text>
           <Link
-              to="/DoctorsForm"
+              to="/doctorsform"
               target="_blank"
               className="support-text2"
             >
