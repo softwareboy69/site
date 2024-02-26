@@ -1,16 +1,22 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 import brandlogo from "../images/brandlogo.png";
+// import { API } from 'aws-amplify';
 
-function DoctorsForm() {
+const DoctorsForm = () => {
   const [formData, setFormData] = useState({
-    firstName: "",
-    lastName: "",
-    email: "",
-    phoneNumber: "",
-    workAddress: "",
-    workContact: "",
+    firstName: '',
+    lastName: '',
+    email: '',
+    phoneNumber: '',
+    workAddress: '',
+    workContact: '',
+    country: '',
+    city: '',
+    licenseNumber: '',
+    specialization: '',
+    experience: '',
+    status: '',
     picture: null,
-    licenseNumber: "",
     pdf: null,
   });
 
@@ -30,10 +36,27 @@ function DoctorsForm() {
     }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Handle form submission logic here
-    console.log(formData);
+    
+    // Call the function to send data to the backend
+    try {
+      await sendDataToBackend(formData);
+      console.log('Data submitted successfully!');
+    } catch (error) {
+      console.error('Error submitting data:', error);
+    }
+  };
+
+  const sendDataToBackend = async (data) => {
+    try {
+      // Adjust the API.post() call based on your Amplify backend setup
+      // await API.post('yourApiName', '/yourApiEndpoint', {
+      //   body: data,
+      // });
+    } catch (error) {
+      throw new Error('Error sending data to backend');
+    }
   };
 
   return (
@@ -130,16 +153,6 @@ function DoctorsForm() {
           </div>
 
           <div className="form-group">
-            <label htmlFor="picture">Picture:</label>
-            <input
-              type="file"
-              id="picture"
-              name="picture"
-              onChange={handleFileChange}
-            />
-          </div>
-
-          <div className="form-group">
             <label htmlFor="licenseNumber">License Number:</label>
             <input
               type="text"
@@ -184,6 +197,16 @@ function DoctorsForm() {
           </div>
 
           <div className="form-group">
+            <label htmlFor="picture">Picture:</label>
+            <input
+              type="file"
+              id="picture"
+              name="picture"
+              onChange={handleFileChange}
+            />
+          </div>
+
+          <div className="form-group">
             <label htmlFor="pdf">Qualifications (CV):</label>
             <input
               type="file"
@@ -199,20 +222,5 @@ function DoctorsForm() {
     </div>
   );
 }
-
-// firstname: String!
-//   lastname: String!
-//   email: String!
-//   country: String!
-//   city: String!
-//   license: String!
-//   specialization: String!
-//   experience: Int!
-//   workplace: String
-//   workAddress: String
-//   workContact: String!
-//   about: String
-//   image: String
-//   status: String
 
 export default DoctorsForm;

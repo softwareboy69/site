@@ -12,7 +12,7 @@ import ServicePage from "./pages/servicepage";
 import AboutPage from "./pages/aboutpage";
 import FooterPage from "./pages/footerpage";
 import Note from "./pages/note";
-import DoctorsForm from "./pages/DoctorsForm";
+import DoctorsForm from "./pages/doctorsform";
 
 
 

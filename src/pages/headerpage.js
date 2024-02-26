@@ -8,9 +8,14 @@ const HeaderPage = () => {
     window.location.href = "https://play.google.com/store/apps/details?id=com.hospiyou"
   }
 
+  const returnhome = () => {
+    window.location.href = "https://hospiyou.com"
+
+  }
+
   return (
     <div className="header">
-      <img src={brandlogo} alt="brand" className="brandpic" />
+      <img src={brandlogo} alt="brand" className="brandpic" onClick={returnhome} />
       <ul className="nav">
         <li className="nav-button">
           <HashLink smooth to="/#goals">
