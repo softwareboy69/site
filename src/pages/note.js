@@ -1,6 +1,6 @@
 import React from "react";
-import Headerpage from "./Headerpage";
-import Footerpage from "./Footerpage";
+import Headerpage from "./headerpage";
+import Footerpage from "./footerpage";
 import bentphone from "../images/bentphone.png";
 import straightphone from "../images/straightphone.png";
 import { Link } from "react-router-dom";

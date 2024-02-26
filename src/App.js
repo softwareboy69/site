@@ -2,16 +2,16 @@ import React from "react";
 import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-import HeaderPage from "./pages/Headerpage";
-import HeroPage from "./pages/Heropage";
-import HeroImagePage from "./pages/Heroimagepage";
-import Enquiry from "./pages/Enquiry";
-import ForPage from "./pages/Forpage";
-import OurGoal from "./pages/Ourgoal";
-import ServicePage from "./pages/Servicepage";
-import AboutPage from "./pages/Aboutpage";
-import FooterPage from "./pages/Footerpage";
-import Note from "./pages/Note";
+import HeaderPage from "./pages/headerpage";
+import HeroPage from "./pages/heropage";
+import HeroImagePage from "./pages/heroimagepage";
+import Enquiry from "./pages/enquiry";
+import ForPage from "./pages/forpage";
+import OurGoal from "./pages/ourgoal";
+import ServicePage from "./pages/servicepage";
+import AboutPage from "./pages/aboutpage";
+import FooterPage from "./pages/footerpage";
+import Note from "./pages/note";
 import DoctorsForm from "./pages/DoctorsForm";
 
 
