@@ -21,7 +21,7 @@ const HeroPage = () => {
           <img src={apple} alt="appleicon" className="icon-style" />
           <text className="downloadtext">Get app on Apple store</text>
         </button> */}
-        <button className="downloadbutton">
+        <button className="downloadbutton" onClick={playstoredownload}>
             <img src={android} alt="playstoreicon" className="icon-style" onClick={playstoredownload} />
             <text className="downloadtext">Get app on Play store</text>
           </button>
