@@ -141,7 +141,7 @@ const FooterPage = () => {
             </Link>
           <text className="support-text2"></text>
           <text className="support-text2" onClick={handleEmailClick}>Contact Us</text>
-          <Link className="support-text2" to="/Note">
+          <Link className="support-text2" to="/Note" target="_blank">
             Investors
           </Link>
         </div>
