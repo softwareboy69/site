@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import brandlogo from "../images/brandlogo.png";
-// import { API } from 'aws-amplify';
 
 const DoctorsForm = () => {
   const [formData, setFormData] = useState({
@@ -133,10 +132,10 @@ const DoctorsForm = () => {
           <div className="form-group">
             <label htmlFor="country">Country:</label>
             <input
-              type="tel"
+              type="text"
               id="country"
               name="country"
-              value={formData.workContact}
+              value={formData.country}
               onChange={handleChange}
             />
           </div>
@@ -144,10 +143,10 @@ const DoctorsForm = () => {
           <div className="form-group">
             <label htmlFor="city">City:</label>
             <input
-              type="tel"
+              type="text"
               id="city"
               name="city"
-              value={formData.workContact}
+              value={formData.city}
               onChange={handleChange}
             />
           </div>
@@ -169,7 +168,7 @@ const DoctorsForm = () => {
               type="text"
               id="specialization"
               name="specialization"
-              value={formData.licenseNumber}
+              value={formData.specialization}
               onChange={handleChange}
             />
           </div>
@@ -180,7 +179,7 @@ const DoctorsForm = () => {
               type="text"
               id="experience"
               name="experience"
-              value={formData.licenseNumber}
+              value={formData.experience}
               onChange={handleChange}
             />
           </div>
@@ -191,7 +190,7 @@ const DoctorsForm = () => {
               type="text"
               id="status"
               name="status"
-              value={formData.licenseNumber}
+              value={formData.status}
               onChange={handleChange}
             />
           </div>
@@ -205,7 +204,7 @@ const DoctorsForm = () => {
               onChange={handleFileChange}
             />
           </div>
-
+          
           <div className="form-group">
             <label htmlFor="pdf">Qualifications (CV):</label>
             <input
