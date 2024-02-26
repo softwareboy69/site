@@ -134,14 +134,13 @@ const FooterPage = () => {
           <text className="support-text">Support</text>
           <Link
               to="/DoctorsForm"
-              target="_blank"
               className="support-text2"
             >
               Hospiyou for Doctors
             </Link>
           <text className="support-text2"></text>
           <text className="support-text2" onClick={handleEmailClick}>Contact Us</text>
-          <Link className="support-text2" to="/Note" target="_blank">
+          <Link className="support-text2" to="/Note">
             Investors
           </Link>
         </div>
