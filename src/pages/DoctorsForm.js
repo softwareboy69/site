@@ -70,7 +70,7 @@ const DoctorsForm = () => {
       firstName,
       lastName,
       email,
-      phoneNumber,
+      
       workAddress,
       workContact,
       country,
@@ -87,7 +87,6 @@ const DoctorsForm = () => {
       firstName === "" ||
       lastName === "" ||
       email === "" ||
-      phoneNumber === "" ||
       workAddress === "" ||
       workContact === "" ||
       country === "" ||
@@ -158,7 +157,7 @@ const DoctorsForm = () => {
       data: data.picture,
       options: {
         contentType: data.picture.type,
-        accessLevel: 'protected',
+        accessLevel: 'guest',
       },
     });
 
@@ -172,13 +171,13 @@ const DoctorsForm = () => {
         data: file,
         options: {
           contentType: file.type,
-          accessLevel: 'protected',
+          accessLevel: 'guest',
         },
       });
       console.log('PDF upload result:', pdfUploadResult);
       return pdfKey;
     });
-    
+
     // Wait for all PDF uploads to complete
     const pdfKeys = await Promise.all(pdfPromises);
 
@@ -188,7 +187,6 @@ const DoctorsForm = () => {
         firstname: data.firstName,
         lastname: data.lastName,
         email: data.email,
-        phoneNumber: data.phoneNumber,
         workplace: data.workplace,
         workAddress: data.workAddress,
         workContact: data.workContact,
@@ -197,7 +195,7 @@ const DoctorsForm = () => {
         license: data.licenseNumber,
         specialization: data.specialization,
         experience: data.experience,
-        status: data.status,
+        about: data.status,
         image: pictureKey, // Assigning the S3 key for the picture
         qualifications: pdfKeys, // Assigning the array of S3 keys for PDF files
       };
@@ -209,7 +207,8 @@ const DoctorsForm = () => {
 
       const createdDoctor = response.data;
 
-      alert(createdDoctor);
+      console.log(createdDoctor);
+
       setLoading(false);
       alert(
         "You will be notified if the Hospiyou team accepts your application, thanks for applying!"
@@ -254,17 +253,6 @@ const DoctorsForm = () => {
               id="email"
               name="email"
               value={formData.email}
-              onChange={handleChange}
-            />
-          </div>
-
-          <div className="form-group">
-            <label htmlFor="phoneNumber">Phone Number:</label>
-            <input
-              type="tel"
-              id="phoneNumber"
-              name="phoneNumber"
-              value={formData.phoneNumber}
               onChange={handleChange}
             />
           </div>
@@ -347,9 +335,9 @@ const DoctorsForm = () => {
           </div>
 
           <div className="form-group">
-            <label htmlFor="experience">Experience:</label>
+            <label htmlFor="experience">Years of Experience:</label>
             <input
-              type="text"
+              type="number"
               id="experience"
               name="experience"
               value={formData.experience}
@@ -380,6 +368,7 @@ const DoctorsForm = () => {
           </div>
 
           <div className="form-group">
+          <label htmlFor="pdf">Qualificatioons (CV):</label>
             <input
               type="file"
               id="pdf"
