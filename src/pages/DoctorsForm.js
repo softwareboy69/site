@@ -1,22 +1,30 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 import brandlogo from "../images/brandlogo.png";
+import { uploadData } from 'aws-amplify/storage';
+import { generateClient } from "aws-amplify/api";
+import * as mutations from "../graphql/mutations";
+import * as queries from "../graphql/queries";
 
 const DoctorsForm = () => {
+  const client = generateClient();
+
+  const [loading, setLoading] = useState(false);
   const [formData, setFormData] = useState({
-    firstName: '',
-    lastName: '',
-    email: '',
-    phoneNumber: '',
-    workAddress: '',
-    workContact: '',
-    country: '',
-    city: '',
-    licenseNumber: '',
-    specialization: '',
-    experience: '',
-    status: '',
+    firstName: "",
+    lastName: "",
+    email: "",
+    phoneNumber: "",
+    workplace: "",
+    workAddress: "",
+    workContact: "",
+    country: "",
+    city: "",
+    licenseNumber: "",
+    specialization: "",
+    experience: "",
+    status: "",
     picture: null,
-    pdf: null,
+    pdfFiles: [],
   });
 
   const handleChange = (e) => {
@@ -29,32 +37,186 @@ const DoctorsForm = () => {
 
   const handleFileChange = (e) => {
     const { name, files } = e.target;
+
+    // Ensure each PDF file is less than or equal to 2MB
+    const pdfFiles = Array.from(files);
+    const isPdfSizeValid = pdfFiles.every(
+      (file) => file.size <= 2 * 1024 * 1024
+    );
+
+    if (!isPdfSizeValid) {
+      alert("Please ensure each PDF file is no larger than 2MB.");
+      return;
+    }
+
     setFormData((prevData) => ({
       ...prevData,
-      [name]: files[0],
+      [name]: [...(prevData[name] || []), ...pdfFiles],
+    }));
+  };
+
+  const removePdfFile = (index) => {
+    setFormData((prevData) => ({
+      ...prevData,
+      pdfFiles: prevData.pdfFiles.filter((_, i) => i !== index),
     }));
   };
 
   const handleSubmit = async (e) => {
+    setLoading(true);
     e.preventDefault();
-    
-    // Call the function to send data to the backend
-    try {
-      await sendDataToBackend(formData);
-      console.log('Data submitted successfully!');
-    } catch (error) {
-      console.error('Error submitting data:', error);
+
+    const {
+      firstName,
+      lastName,
+      email,
+      phoneNumber,
+      workAddress,
+      workContact,
+      country,
+      city,
+      licenseNumber,
+      specialization,
+      experience,
+      status,
+      picture,
+      pdfFiles,
+    } = formData;
+
+    if (
+      firstName === "" ||
+      lastName === "" ||
+      email === "" ||
+      phoneNumber === "" ||
+      workAddress === "" ||
+      workContact === "" ||
+      country === "" ||
+      city === "" ||
+      licenseNumber === "" ||
+      specialization === "" ||
+      experience === "" ||
+      status === "" ||
+      picture === null ||
+      pdfFiles.length === 0
+    ) {
+      alert("Please fill in all details");
+      setLoading(false);
+      return;
+    } else {
+      // Call the function to send data to the backend
+      try {
+        await sendDataToBackend(formData);
+      } catch (error) {
+        setLoading(false);
+
+        alert("Error submitting data:", error);
+      }
     }
   };
 
   const sendDataToBackend = async (data) => {
+    // if email or license number exists in the database reject it
+    // Perform email existence check
+    const emailCheckResponse = await client.graphql({
+      query: queries.listDoctorModels,
+      variables: { filter: { email: { eq: data.email } } },
+    });
+
+    const existingEmailDoctors = emailCheckResponse.data.listDoctorModels.items;
+
+    if (existingEmailDoctors.length > 0) {
+      alert("Email already exists. Please use a different email address.");
+      setLoading(false);
+
+      return;
+    }
+
+    // Perform license number existence check
+    const licenseCheckResponse = await client.graphql({
+      query: queries.listDoctorModels,
+      variables: { filter: { license: { eq: data.licenseNumber } } },
+    });
+
+    const existingLicenseDoctors =
+      licenseCheckResponse.data.listDoctorModels.items;
+
+    if (existingLicenseDoctors.length > 0) {
+      alert(
+        "License number already exists. Please use a different license number."
+      );
+      setLoading(false);
+      return;
+    }
+
+    setLoading(true);
+    
     try {
-      // Adjust the API.post() call based on your Amplify backend setup
-      // await API.post('yourApiName', '/yourApiEndpoint', {
-      //   body: data,
-      // });
+      // Upload the picture using custom uploadData method
+    const pictureKey = `pictures/${Date.now()}_${data.picture.name}`;
+    const pictureUploadResult = await uploadData({
+      key: pictureKey,
+      data: data.picture,
+      options: {
+        contentType: data.picture.type,
+        accessLevel: 'protected',
+      },
+    });
+
+    console.log('Picture upload result:', pictureUploadResult);
+
+    // Upload each PDF file using custom uploadData method
+    const pdfPromises = data.pdfFiles.map(async (file) => {
+      const pdfKey = `pdf-documents/${Date.now()}_${file.name}`;
+      const pdfUploadResult = await uploadData({
+        key: pdfKey,
+        data: file,
+        options: {
+          contentType: file.type,
+          accessLevel: 'protected',
+        },
+      });
+      console.log('PDF upload result:', pdfUploadResult);
+      return pdfKey;
+    });
+    
+    // Wait for all PDF uploads to complete
+    const pdfKeys = await Promise.all(pdfPromises);
+
+
+      // Now you can send the rest of the form data along with the array of PDF keys to your backend API
+      const doctorData = {
+        firstname: data.firstName,
+        lastname: data.lastName,
+        email: data.email,
+        phoneNumber: data.phoneNumber,
+        workplace: data.workplace,
+        workAddress: data.workAddress,
+        workContact: data.workContact,
+        country: data.country,
+        city: data.city,
+        license: data.licenseNumber,
+        specialization: data.specialization,
+        experience: data.experience,
+        status: data.status,
+        image: pictureKey, // Assigning the S3 key for the picture
+        qualifications: pdfKeys, // Assigning the array of S3 keys for PDF files
+      };
+
+      const response = await client.graphql({
+        query: mutations.createDoctorModel,
+        variables: { input: doctorData },
+      });
+
+      const createdDoctor = response.data;
+
+      alert(createdDoctor);
+      setLoading(false);
+      alert(
+        "You will be notified if the Hospiyou team accepts your application, thanks for applying!"
+      );
     } catch (error) {
-      throw new Error('Error sending data to backend');
+      setLoading(false);
+      alert("Error submitting data:", error);
     }
   };
 
@@ -103,6 +265,17 @@ const DoctorsForm = () => {
               id="phoneNumber"
               name="phoneNumber"
               value={formData.phoneNumber}
+              onChange={handleChange}
+            />
+          </div>
+
+          <div className="form-group">
+            <label htmlFor="workplace">Work Place:</label>
+            <input
+              type="text"
+              id="workplace"
+              name="workplace"
+              value={formData.workplace}
               onChange={handleChange}
             />
           </div>
@@ -201,25 +374,41 @@ const DoctorsForm = () => {
               type="file"
               id="picture"
               name="picture"
-              onChange={handleFileChange}
-            />
-          </div>
-          
-          <div className="form-group">
-            <label htmlFor="pdf">Qualifications (CV):</label>
-            <input
-              type="file"
-              id="pdf"
-              name="pdf"
+              accept="image/*"
               onChange={handleFileChange}
             />
           </div>
 
-          <button type="submit">Submit</button>
+          <div className="form-group">
+            <input
+              type="file"
+              id="pdf"
+              name="pdfFiles"
+              accept=".pdf"
+              multiple
+              onChange={handleFileChange}
+            />
+
+            <div>
+              <h4>Selected PDF Files:</h4>
+              <ul>
+                {formData.pdfFiles.map((file, index) => (
+                  <li key={index}>
+                    {file.name} ({(file.size / (1024 * 1024)).toFixed(2)} MB)
+                    <button onClick={() => removePdfFile(index)}>Remove</button>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+
+          <button type="submit" disabled={loading}>
+            {loading ? "Submitting..." : "Submit"}
+          </button>
         </form>
       </div>
     </div>
   );
-}
+};
 
 export default DoctorsForm;
