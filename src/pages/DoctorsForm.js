@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import brandlogo from "../images/brandlogo.png";
-import { uploadData } from 'aws-amplify/storage';
+import { uploadData } from "aws-amplify/storage";
 import { generateClient } from "aws-amplify/api";
 import * as mutations from "../graphql/mutations";
 import * as queries from "../graphql/queries";
@@ -70,7 +70,7 @@ const DoctorsForm = () => {
       firstName,
       lastName,
       email,
-      
+
       workAddress,
       workContact,
       country,
@@ -148,39 +148,51 @@ const DoctorsForm = () => {
     }
 
     setLoading(true);
-    
+
     try {
       // Upload the picture using custom uploadData method
-    const pictureKey = `pictures/${Date.now()}_${data.picture.name}`;
-    const pictureUploadResult = await uploadData({
-      key: pictureKey,
-      data: data.picture,
-      options: {
-        contentType: data.picture.type,
-        accessLevel: 'guest',
-      },
-    });
-
-    console.log('Picture upload result:', pictureUploadResult);
-
-    // Upload each PDF file using custom uploadData method
-    const pdfPromises = data.pdfFiles.map(async (file) => {
-      const pdfKey = `pdf-documents/${Date.now()}_${file.name}`;
-      const pdfUploadResult = await uploadData({
-        key: pdfKey,
-        data: file,
+      const pictureKey = `pictures/${Date.now()}_${data.picture.name}`;
+      const pictureUploadResult = await uploadData({
+        key: pictureKey,
+        data: data.picture,
         options: {
-          contentType: file.type,
-          accessLevel: 'guest',
+          contentType: data.picture.type,
+          accessLevel: "guest",
         },
       });
-      console.log('PDF upload result:', pdfUploadResult);
-      return pdfKey;
-    });
 
-    // Wait for all PDF uploads to complete
-    const pdfKeys = await Promise.all(pdfPromises);
+      console.log("Picture upload result:", pictureUploadResult);
 
+      // Upload each PDF file using custom uploadData method
+      let pdfPromises = [];
+
+      if (data && data.pdfFiles) {
+        const pdfFilesArray = Array.isArray(data.pdfFiles)
+          ? data.pdfFiles
+          : [data.pdfFiles];
+
+        // Ensure that pdfFilesArray is defined before mapping over it
+        if (pdfFilesArray) {
+          pdfPromises = pdfFilesArray.map(async (file) => {
+            const pdfKey = `pdf-documents/${Date.now()}_${file.name}`;
+            const pdfUploadResult = await uploadData({
+              key: pdfKey,
+              data: file,
+              options: {
+                contentType: file.type,
+                accessLevel: "guest",
+              },
+            });
+            console.log("PDF upload result:", pdfUploadResult);
+            return pdfKey;
+          });
+        }
+      } else {
+        console.warn("No PDF files to upload or invalid format.");
+      }
+
+      // Wait for all PDF uploads to complete
+      const pdfKeys = await Promise.all(pdfPromises);
 
       // Now you can send the rest of the form data along with the array of PDF keys to your backend API
       const doctorData = {
@@ -208,6 +220,7 @@ const DoctorsForm = () => {
       const createdDoctor = response.data;
 
       console.log(createdDoctor);
+      setFormData({});
 
       setLoading(false);
       alert(
@@ -368,7 +381,7 @@ const DoctorsForm = () => {
           </div>
 
           <div className="form-group">
-          <label htmlFor="pdf">Qualificatioons (CV):</label>
+            <label htmlFor="pdf">Qualificatioons (CV):</label>
             <input
               type="file"
               id="pdf"
