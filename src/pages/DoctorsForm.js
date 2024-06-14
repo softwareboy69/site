@@ -381,7 +381,7 @@ const DoctorsForm = () => {
           </div>
 
           <div className="form-group">
-            <label htmlFor="pdf">Qualificatioons (CV):</label>
+            <label htmlFor="pdf">Qualifications (CV):</label>
             <input
               type="file"
               id="pdf"
