@@ -875,6 +875,10 @@ button:hover {
   background-color: #fff;
 }
 
+.location {
+  padding-left: 150px;
+}
+
 @media (max-width: 525px) {
   .container {
     display: flex;
@@ -1737,4 +1741,9 @@ button:hover {
     justify-content: center;
     align-items: center;
   }
+
+
+.location {
+  padding-left: 20px;
+}
 }

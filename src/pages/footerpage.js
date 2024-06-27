@@ -21,7 +21,7 @@ const FooterPage = () => {
 
     window.location.href = mailtoLink;
   };
-  
+
   const handleInstagramClick = () => {
     window.location.href =
       "https://www.instagram.com/hospiyou?igshid=YzVkODRmOTdmMw==";
@@ -40,122 +40,151 @@ const FooterPage = () => {
   };
 
   const playstoredownload = () => {
-    window.location.href = "https://play.google.com/store/apps/details?id=com.hospiyou"
-  }
+    window.location.href =
+      "https://play.google.com/store/apps/details?id=com.hospiyou";
+  };
 
   return (
-    <div className="footer">
-      <div className="footer-wrapper">
-        <div className="firstdiv">
-          <img src={brandlogo} alt="brand" className="brandpic" />
-          <div className="logo-container">
-            <button className="logo-div">
-              <img
-                src={twitter}
-                onClick={handleTwitterClick}
-                alt="logo1"
-                className="logo-style"
-              />
-            </button>
-            <button onClick={handleInstagramClick} className="logo-div">
-              <img src={instagram} alt="logo2" className="logo-style" />
-            </button>
-            <button onClick={handleLinkedinClick} className="logo-div">
-              <img src={linkedin} alt="logo3" className="logo-style" />
-            </button>
-            <button className="logo-div">
-              <img
-                src={youtube}
-                alt="logo4"
-                className="logo-style"
-                onClick={handleYoutubeClick}
-              />
-            </button>
+    <div>
+      <div className="footer">
+        <div className="footer-wrapper">
+          <div className="firstdiv">
+            <img src={brandlogo} alt="brand" className="brandpic" />
+            <div className="logo-container">
+              <button className="logo-div">
+                <img
+                  src={twitter}
+                  onClick={handleTwitterClick}
+                  alt="logo1"
+                  className="logo-style"
+                />
+              </button>
+              <button onClick={handleInstagramClick} className="logo-div">
+                <img src={instagram} alt="logo2" className="logo-style" />
+              </button>
+              <button onClick={handleLinkedinClick} className="logo-div">
+                <img src={linkedin} alt="logo3" className="logo-style" />
+              </button>
+              <button className="logo-div">
+                <img
+                  src={youtube}
+                  alt="logo4"
+                  className="logo-style"
+                  onClick={handleYoutubeClick}
+                />
+              </button>
 
-            <button className="logo-div">
-              <img
-                onClick={handleEmailClick}
-                src={email}
-                alt="logo6"
-                className="logo-style"
-              />
-            </button>
+              <button className="logo-div">
+                <img
+                  onClick={handleEmailClick}
+                  src={email}
+                  alt="logo6"
+                  className="logo-style"
+                />
+              </button>
+            </div>
           </div>
-        </div>
-        <div className="footer-download_pc">
-          <text className="footerdownloadtext_pc">Download App</text>
-          <div className="footer-install_pc">
-            {/* <button className="downloadbutton">
+          <div className="footer-download_pc">
+            <text className="footerdownloadtext_pc">Download App</text>
+            <div className="footer-install_pc">
+              {/* <button className="downloadbutton">
               <img src={apple} alt="appleicon" className="icon-style" />
               <text className="downloadtext">Get app on Apple store</text>
             </button> */}
-            <button className="downloadbutton" onClick={playstoredownload}>
-              <img src={android} alt="playstoreicon" className="icon-style" />
+              <button className="downloadbutton" onClick={playstoredownload}>
+                <img src={android} alt="playstoreicon" className="icon-style" />
+                <text className="downloadtext">Get app on Play store</text>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div className="below-social">
+          <div className="second-div">
+            <div className="legal-div">
+              <text className="Legal-text">Legal</text>
+              <Link
+                to="https://docs.google.com/forms/d/e/1FAIpQLSd9jeUdFfAyZyhrSQTiEaEA55Fiqokkk63eTEKGxI8qnzsFRw/viewform"
+                target="_blank"
+                className="deletion"
+              >
+                Request deletion of account
+              </Link>
+            </div>
+            <div className="TC">
+              <text className="TC-text">Terms & conditions</text>
+              <Link
+                to={TCdoctor}
+                download="TERMS-AND-CONDITIONS-DOCTOR"
+                target="_blank"
+                rel="noreferrer"
+                className="medpract"
+              >
+                For medical practitioners
+              </Link>
+              <Link
+                to={TCpatient}
+                download="TERMS-AND-CONDITIONS-PATIENT"
+                target="_blank"
+                rel="noreferrer"
+                className="individual"
+              >
+                For individuals
+              </Link>
+            </div>
+          </div>
+          <div className="third-div">
+            <text className="support-text">Support</text>
+            <Link to="/DoctorsForm" className="support-text2">
+              Hospiyou for Doctors
+            </Link>
+            <text className="support-text2"></text>
+            <text className="support-text2" onClick={handleEmailClick}>
+              Contact Us
+            </text>
+            <Link className="support-text2" to="/Note">
+              Investors
+            </Link>
+          </div>
+        </div>
+        <div className="footer-download">
+          <text className="footerdownloadtext">Download App</text>
+          <div className="footer-install">
+            {/* <button className="downloadbutton">
+            <img src={apple} alt="appleicon" className="icon-style" />
+            <text className="downloadtext">Get app on Apple store</text>
+          </button> */}
+            <button className="downloadbutton">
+              <img
+                src={android}
+                alt="playstoreicon"
+                className="icon-style"
+                onClick={playstoredownload}
+              />
               <text className="downloadtext">Get app on Play store</text>
             </button>
           </div>
         </div>
       </div>
-      <div className="below-social">
-        <div className="second-div">
-          <div className="legal-div">
-            <text className="Legal-text">Legal</text>
-            <Link
-              to="https://docs.google.com/forms/d/e/1FAIpQLSd9jeUdFfAyZyhrSQTiEaEA55Fiqokkk63eTEKGxI8qnzsFRw/viewform"
-              target="_blank"
-              className="deletion"
-            >
-              Request deletion of account
-            </Link>
-          </div>
-          <div className="TC">
-            <text className="TC-text">Terms & conditions</text>
-            <Link
-              to={TCdoctor}
-              download="TERMS-AND-CONDITIONS-DOCTOR"
-              target="_blank"
-              rel="noreferrer"
-              className="medpract"
-            >
-              For medical practitioners
-            </Link>
-            <Link
-              to={TCpatient}
-              download="TERMS-AND-CONDITIONS-PATIENT"
-              target="_blank"
-              rel="noreferrer"
-              className="individual"
-            >
-              For individuals
-            </Link>
-          </div>
-        </div>
-        <div className="third-div">
-          <text className="support-text">Support</text>
-          <Link
-              to="/DoctorsForm"
-              className="support-text2"
-            >
-              Hospiyou for Doctors
-            </Link>
-          <text className="support-text2"></text>
-          <text className="support-text2" onClick={handleEmailClick}>Contact Us</text>
-          <Link className="support-text2" to="/Note">
-            Investors
-          </Link>
-        </div>
-      </div>
-      <div className="footer-download">
-        <text className="footerdownloadtext">Download App</text>
-        <div className="footer-install">
-          {/* <button className="downloadbutton">
-            <img src={apple} alt="appleicon" className="icon-style" />
-            <text className="downloadtext">Get app on Apple store</text>
-          </button> */}
-          <button className="downloadbutton">
-            <img src={android} alt="playstoreicon" className="icon-style" onClick={playstoredownload} />
-            <text className="downloadtext">Get app on Play store</text>
-          </button>
+      <div
+        style={{
+          height: "100px",
+          width: "100%",
+          padding: "50px",
+          backgroundColor: "#F1F9FE",
+        }}
+      >
+        <div className="location">
+          <text style={{ fontSize: 18, }}>
+            22 Road 7 Havana Estate,
+            <br />
+            Sars Road, Rupokwu,
+            <br />
+            Port Harcourt, Nigeria.
+            <br />
+            <br />
+            Contact: +2347037432078
+          </text>
+
         </div>
       </div>
     </div>
