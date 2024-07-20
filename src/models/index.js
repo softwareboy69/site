@@ -4,19 +4,21 @@ import { schema } from './schema';
 
 
 
-const { Article, Notification, VideoCall, Reviews, Appointment, ConsultationFeeModel, ChatRoom, Message, ChatParticipant, PatientModel, DayTimeModel, DoctorModel } = initSchema(schema);
+const { Transaction, Wallet, VideoCall, Article, Notification, Reviews, Appointment, ChatRoom, Message, ChatParticipant, PatientModel, DayTimeModel, ConsultationFeeModel, DoctorModel } = initSchema(schema);
 
 export {
+  Transaction,
+  Wallet,
+  VideoCall,
   Article,
   Notification,
-  VideoCall,
   Reviews,
   Appointment,
-  ConsultationFeeModel,
   ChatRoom,
   Message,
   ChatParticipant,
   PatientModel,
   DayTimeModel,
+  ConsultationFeeModel,
   DoctorModel
 };

@@ -1,5 +1,364 @@
 export const schema = {
     "models": {
+        "Transaction": {
+            "name": "Transaction",
+            "fields": {
+                "id": {
+                    "name": "id",
+                    "isArray": false,
+                    "type": "ID",
+                    "isRequired": true,
+                    "attributes": []
+                },
+                "message": {
+                    "name": "message",
+                    "isArray": false,
+                    "type": "String",
+                    "isRequired": false,
+                    "attributes": []
+                },
+                "category": {
+                    "name": "category",
+                    "isArray": false,
+                    "type": "String",
+                    "isRequired": false,
+                    "attributes": []
+                },
+                "status": {
+                    "name": "status",
+                    "isArray": false,
+                    "type": "String",
+                    "isRequired": false,
+                    "attributes": []
+                },
+                "amount": {
+                    "name": "amount",
+                    "isArray": false,
+                    "type": "Float",
+                    "isRequired": false,
+                    "attributes": []
+                },
+                "type": {
+                    "name": "type",
+                    "isArray": false,
+                    "type": "String",
+                    "isRequired": false,
+                    "attributes": []
+                },
+                "currency": {
+                    "name": "currency",
+                    "isArray": false,
+                    "type": "String",
+                    "isRequired": false,
+                    "attributes": []
+                },
+                "transactiontype": {
+                    "name": "transactiontype",
+                    "isArray": false,
+                    "type": "String",
+                    "isRequired": false,
+                    "attributes": []
+                },
+                "sender": {
+                    "name": "sender",
+                    "isArray": false,
+                    "type": "String",
+                    "isRequired": false,
+                    "attributes": []
+                },
+                "receiver": {
+                    "name": "receiver",
+                    "isArray": false,
+                    "type": "String",
+                    "isRequired": false,
+                    "attributes": []
+                },
+                "createdAt": {
+                    "name": "createdAt",
+                    "isArray": false,
+                    "type": "AWSDateTime",
+                    "isRequired": false,
+                    "attributes": []
+                },
+                "updatedAt": {
+                    "name": "updatedAt",
+                    "isArray": false,
+                    "type": "AWSDateTime",
+                    "isRequired": false,
+                    "attributes": [],
+                    "isReadOnly": true
+                }
+            },
+            "syncable": true,
+            "pluralName": "Transactions",
+            "attributes": [
+                {
+                    "type": "model",
+                    "properties": {}
+                },
+                {
+                    "type": "auth",
+                    "properties": {
+                        "rules": [
+                            {
+                                "allow": "public",
+                                "operations": [
+                                    "create",
+                                    "update",
+                                    "delete",
+                                    "read"
+                                ]
+                            },
+                            {
+                                "provider": "userPools",
+                                "ownerField": "owner",
+                                "allow": "owner",
+                                "identityClaim": "cognito:username",
+                                "operations": [
+                                    "create",
+                                    "update",
+                                    "delete",
+                                    "read"
+                                ]
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        "Wallet": {
+            "name": "Wallet",
+            "fields": {
+                "id": {
+                    "name": "id",
+                    "isArray": false,
+                    "type": "ID",
+                    "isRequired": true,
+                    "attributes": []
+                },
+                "ownerID": {
+                    "name": "ownerID",
+                    "isArray": false,
+                    "type": "ID",
+                    "isRequired": true,
+                    "attributes": []
+                },
+                "accountNumber": {
+                    "name": "accountNumber",
+                    "isArray": false,
+                    "type": "String",
+                    "isRequired": true,
+                    "attributes": []
+                },
+                "accountName": {
+                    "name": "accountName",
+                    "isArray": false,
+                    "type": "String",
+                    "isRequired": true,
+                    "attributes": []
+                },
+                "createdAt": {
+                    "name": "createdAt",
+                    "isArray": false,
+                    "type": "AWSDateTime",
+                    "isRequired": false,
+                    "attributes": [],
+                    "isReadOnly": true
+                },
+                "updatedAt": {
+                    "name": "updatedAt",
+                    "isArray": false,
+                    "type": "AWSDateTime",
+                    "isRequired": false,
+                    "attributes": [],
+                    "isReadOnly": true
+                }
+            },
+            "syncable": true,
+            "pluralName": "Wallets",
+            "attributes": [
+                {
+                    "type": "model",
+                    "properties": {}
+                },
+                {
+                    "type": "auth",
+                    "properties": {
+                        "rules": [
+                            {
+                                "allow": "public",
+                                "operations": [
+                                    "create",
+                                    "update",
+                                    "delete",
+                                    "read"
+                                ]
+                            },
+                            {
+                                "provider": "userPools",
+                                "ownerField": "owner",
+                                "allow": "owner",
+                                "identityClaim": "cognito:username",
+                                "operations": [
+                                    "create",
+                                    "update",
+                                    "delete",
+                                    "read"
+                                ]
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        "VideoCall": {
+            "name": "VideoCall",
+            "fields": {
+                "id": {
+                    "name": "id",
+                    "isArray": false,
+                    "type": "ID",
+                    "isRequired": true,
+                    "attributes": []
+                },
+                "channelName": {
+                    "name": "channelName",
+                    "isArray": false,
+                    "type": "String",
+                    "isRequired": false,
+                    "attributes": []
+                },
+                "patientmodelID": {
+                    "name": "patientmodelID",
+                    "isArray": false,
+                    "type": "ID",
+                    "isRequired": true,
+                    "attributes": []
+                },
+                "doctormodelID": {
+                    "name": "doctormodelID",
+                    "isArray": false,
+                    "type": "ID",
+                    "isRequired": true,
+                    "attributes": []
+                },
+                "patient": {
+                    "name": "patient",
+                    "isArray": false,
+                    "type": {
+                        "model": "PatientModel"
+                    },
+                    "isRequired": false,
+                    "attributes": [],
+                    "association": {
+                        "connectionType": "BELONGS_TO",
+                        "targetNames": [
+                            "patientmodelID"
+                        ]
+                    }
+                },
+                "doctor": {
+                    "name": "doctor",
+                    "isArray": false,
+                    "type": {
+                        "model": "DoctorModel"
+                    },
+                    "isRequired": false,
+                    "attributes": [],
+                    "association": {
+                        "connectionType": "BELONGS_TO",
+                        "targetNames": [
+                            "doctormodelID"
+                        ]
+                    }
+                },
+                "subscriberDeviceToken": {
+                    "name": "subscriberDeviceToken",
+                    "isArray": false,
+                    "type": "String",
+                    "isRequired": false,
+                    "attributes": []
+                },
+                "createdAt": {
+                    "name": "createdAt",
+                    "isArray": false,
+                    "type": "AWSDateTime",
+                    "isRequired": true,
+                    "attributes": []
+                },
+                "endedAt": {
+                    "name": "endedAt",
+                    "isArray": false,
+                    "type": "AWSDateTime",
+                    "isRequired": false,
+                    "attributes": []
+                },
+                "picked": {
+                    "name": "picked",
+                    "isArray": false,
+                    "type": "Boolean",
+                    "isRequired": false,
+                    "attributes": []
+                },
+                "expiryTime": {
+                    "name": "expiryTime",
+                    "isArray": false,
+                    "type": "Float",
+                    "isRequired": false,
+                    "attributes": []
+                },
+                "updatedAt": {
+                    "name": "updatedAt",
+                    "isArray": false,
+                    "type": "AWSDateTime",
+                    "isRequired": false,
+                    "attributes": [],
+                    "isReadOnly": true
+                }
+            },
+            "syncable": true,
+            "pluralName": "VideoCalls",
+            "attributes": [
+                {
+                    "type": "model",
+                    "properties": {}
+                },
+                {
+                    "type": "key",
+                    "properties": {
+                        "name": "byPatientModel",
+                        "fields": [
+                            "patientmodelID"
+                        ]
+                    }
+                },
+                {
+                    "type": "key",
+                    "properties": {
+                        "name": "byDoctorModel",
+                        "fields": [
+                            "doctormodelID"
+                        ]
+                    }
+                },
+                {
+                    "type": "auth",
+                    "properties": {
+                        "rules": [
+                            {
+                                "allow": "public",
+                                "operations": [
+                                    "create",
+                                    "update",
+                                    "delete",
+                                    "read"
+                                ]
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
         "Article": {
             "name": "Article",
             "fields": {
@@ -28,6 +387,13 @@ export const schema = {
                     "name": "image",
                     "isArray": false,
                     "type": "String",
+                    "isRequired": false,
+                    "attributes": []
+                },
+                "doctormodelID": {
+                    "name": "doctormodelID",
+                    "isArray": false,
+                    "type": "ID",
                     "isRequired": true,
                     "attributes": []
                 },
@@ -41,7 +407,9 @@ export const schema = {
                     "attributes": [],
                     "association": {
                         "connectionType": "BELONGS_TO",
-                        "targetName": "doctormodelID"
+                        "targetNames": [
+                            "doctormodelID"
+                        ]
                     }
                 },
                 "createdAt": {
@@ -161,6 +529,20 @@ export const schema = {
                     "isRequired": false,
                     "attributes": []
                 },
+                "doctormodelID": {
+                    "name": "doctormodelID",
+                    "isArray": false,
+                    "type": "ID",
+                    "isRequired": false,
+                    "attributes": []
+                },
+                "patientmodelID": {
+                    "name": "patientmodelID",
+                    "isArray": false,
+                    "type": "ID",
+                    "isRequired": false,
+                    "attributes": []
+                },
                 "doctor": {
                     "name": "doctor",
                     "isArray": false,
@@ -171,7 +553,9 @@ export const schema = {
                     "attributes": [],
                     "association": {
                         "connectionType": "BELONGS_TO",
-                        "targetName": "doctormodelID"
+                        "targetNames": [
+                            "doctormodelID"
+                        ]
                     }
                 },
                 "patient": {
@@ -184,7 +568,9 @@ export const schema = {
                     "attributes": [],
                     "association": {
                         "connectionType": "BELONGS_TO",
-                        "targetName": "patientmodelID"
+                        "targetNames": [
+                            "patientmodelID"
+                        ]
                     }
                 },
                 "createdAt": {
@@ -253,129 +639,6 @@ export const schema = {
                 }
             ]
         },
-        "VideoCall": {
-            "name": "VideoCall",
-            "fields": {
-                "id": {
-                    "name": "id",
-                    "isArray": false,
-                    "type": "ID",
-                    "isRequired": true,
-                    "attributes": []
-                },
-                "channelName": {
-                    "name": "channelName",
-                    "isArray": false,
-                    "type": "String",
-                    "isRequired": false,
-                    "attributes": []
-                },
-                "patient": {
-                    "name": "patient",
-                    "isArray": false,
-                    "type": {
-                        "model": "PatientModel"
-                    },
-                    "isRequired": false,
-                    "attributes": [],
-                    "association": {
-                        "connectionType": "BELONGS_TO",
-                        "targetName": "patientmodelID"
-                    }
-                },
-                "doctor": {
-                    "name": "doctor",
-                    "isArray": false,
-                    "type": {
-                        "model": "DoctorModel"
-                    },
-                    "isRequired": false,
-                    "attributes": [],
-                    "association": {
-                        "connectionType": "BELONGS_TO",
-                        "targetName": "doctormodelID"
-                    }
-                },
-                "subscriberDeviceToken": {
-                    "name": "subscriberDeviceToken",
-                    "isArray": false,
-                    "type": "String",
-                    "isRequired": true,
-                    "attributes": []
-                },
-                "createdAt": {
-                    "name": "createdAt",
-                    "isArray": false,
-                    "type": "AWSDateTime",
-                    "isRequired": true,
-                    "attributes": []
-                },
-                "picked": {
-                    "name": "picked",
-                    "isArray": false,
-                    "type": "Boolean",
-                    "isRequired": false,
-                    "attributes": []
-                },
-                "expiryTime": {
-                    "name": "expiryTime",
-                    "isArray": false,
-                    "type": "Float",
-                    "isRequired": false,
-                    "attributes": []
-                },
-                "updatedAt": {
-                    "name": "updatedAt",
-                    "isArray": false,
-                    "type": "AWSDateTime",
-                    "isRequired": false,
-                    "attributes": [],
-                    "isReadOnly": true
-                }
-            },
-            "syncable": true,
-            "pluralName": "VideoCalls",
-            "attributes": [
-                {
-                    "type": "model",
-                    "properties": {}
-                },
-                {
-                    "type": "key",
-                    "properties": {
-                        "name": "byPatientModel",
-                        "fields": [
-                            "patientmodelID"
-                        ]
-                    }
-                },
-                {
-                    "type": "key",
-                    "properties": {
-                        "name": "byDoctorModel",
-                        "fields": [
-                            "doctormodelID"
-                        ]
-                    }
-                },
-                {
-                    "type": "auth",
-                    "properties": {
-                        "rules": [
-                            {
-                                "allow": "public",
-                                "operations": [
-                                    "create",
-                                    "update",
-                                    "delete",
-                                    "read"
-                                ]
-                            }
-                        ]
-                    }
-                }
-            ]
-        },
         "Reviews": {
             "name": "Reviews",
             "fields": {
@@ -400,6 +663,13 @@ export const schema = {
                     "isRequired": false,
                     "attributes": []
                 },
+                "patientmodelID": {
+                    "name": "patientmodelID",
+                    "isArray": false,
+                    "type": "ID",
+                    "isRequired": true,
+                    "attributes": []
+                },
                 "doctormodelID": {
                     "name": "doctormodelID",
                     "isArray": false,
@@ -417,7 +687,9 @@ export const schema = {
                     "attributes": [],
                     "association": {
                         "connectionType": "BELONGS_TO",
-                        "targetName": "patientmodelID"
+                        "targetNames": [
+                            "patientmodelID"
+                        ]
                     }
                 },
                 "createdAt": {
@@ -539,6 +811,13 @@ export const schema = {
                     "isRequired": false,
                     "attributes": []
                 },
+                "fee": {
+                    "name": "fee",
+                    "isArray": false,
+                    "type": "Float",
+                    "isRequired": false,
+                    "attributes": []
+                },
                 "shortnote": {
                     "name": "shortnote",
                     "isArray": false,
@@ -567,6 +846,20 @@ export const schema = {
                     "isRequired": false,
                     "attributes": []
                 },
+                "doctormodelID": {
+                    "name": "doctormodelID",
+                    "isArray": false,
+                    "type": "ID",
+                    "isRequired": true,
+                    "attributes": []
+                },
+                "patientmodelID": {
+                    "name": "patientmodelID",
+                    "isArray": false,
+                    "type": "ID",
+                    "isRequired": true,
+                    "attributes": []
+                },
                 "patient": {
                     "name": "patient",
                     "isArray": false,
@@ -577,7 +870,9 @@ export const schema = {
                     "attributes": [],
                     "association": {
                         "connectionType": "BELONGS_TO",
-                        "targetName": "patientmodelID"
+                        "targetNames": [
+                            "patientmodelID"
+                        ]
                     }
                 },
                 "doctor": {
@@ -590,7 +885,9 @@ export const schema = {
                     "attributes": [],
                     "association": {
                         "connectionType": "BELONGS_TO",
-                        "targetName": "doctormodelID"
+                        "targetNames": [
+                            "doctormodelID"
+                        ]
                     }
                 },
                 "createdAt": {
@@ -653,114 +950,6 @@ export const schema = {
                 }
             ]
         },
-        "ConsultationFeeModel": {
-            "name": "ConsultationFeeModel",
-            "fields": {
-                "id": {
-                    "name": "id",
-                    "isArray": false,
-                    "type": "ID",
-                    "isRequired": true,
-                    "attributes": []
-                },
-                "rateperminute": {
-                    "name": "rateperminute",
-                    "isArray": false,
-                    "type": "Float",
-                    "isRequired": false,
-                    "attributes": []
-                },
-                "timeframe": {
-                    "name": "timeframe",
-                    "isArray": false,
-                    "type": "String",
-                    "isRequired": false,
-                    "attributes": []
-                },
-                "consultationtype": {
-                    "name": "consultationtype",
-                    "isArray": false,
-                    "type": "String",
-                    "isRequired": false,
-                    "attributes": []
-                },
-                "doctormodelID": {
-                    "name": "doctormodelID",
-                    "isArray": false,
-                    "type": "ID",
-                    "isRequired": true,
-                    "attributes": []
-                },
-                "rate": {
-                    "name": "rate",
-                    "isArray": false,
-                    "type": "String",
-                    "isRequired": false,
-                    "attributes": []
-                },
-                "createdAt": {
-                    "name": "createdAt",
-                    "isArray": false,
-                    "type": "AWSDateTime",
-                    "isRequired": false,
-                    "attributes": [],
-                    "isReadOnly": true
-                },
-                "updatedAt": {
-                    "name": "updatedAt",
-                    "isArray": false,
-                    "type": "AWSDateTime",
-                    "isRequired": false,
-                    "attributes": [],
-                    "isReadOnly": true
-                }
-            },
-            "syncable": true,
-            "pluralName": "ConsultationFeeModels",
-            "attributes": [
-                {
-                    "type": "model",
-                    "properties": {}
-                },
-                {
-                    "type": "key",
-                    "properties": {
-                        "name": "byDoctorModel",
-                        "fields": [
-                            "doctormodelID"
-                        ]
-                    }
-                },
-                {
-                    "type": "auth",
-                    "properties": {
-                        "rules": [
-                            {
-                                "allow": "public",
-                                "operations": [
-                                    "create",
-                                    "update",
-                                    "delete",
-                                    "read"
-                                ]
-                            },
-                            {
-                                "provider": "userPools",
-                                "ownerField": "owner",
-                                "allow": "owner",
-                                "identityClaim": "cognito:username",
-                                "operations": [
-                                    "create",
-                                    "update",
-                                    "delete",
-                                    "read"
-                                ]
-                            }
-                        ]
-                    }
-                }
-            ]
-        },
         "ChatRoom": {
             "name": "ChatRoom",
             "fields": {
@@ -796,7 +985,9 @@ export const schema = {
                     "isArrayNullable": true,
                     "association": {
                         "connectionType": "HAS_MANY",
-                        "associatedWith": "chatroom"
+                        "associatedWith": [
+                            "chatroom"
+                        ]
                     }
                 },
                 "messages": {
@@ -810,7 +1001,9 @@ export const schema = {
                     "isArrayNullable": true,
                     "association": {
                         "connectionType": "HAS_MANY",
-                        "associatedWith": "chatroom"
+                        "associatedWith": [
+                            "chatroom"
+                        ]
                     }
                 },
                 "lastMessage": {
@@ -823,8 +1016,12 @@ export const schema = {
                     "attributes": [],
                     "association": {
                         "connectionType": "HAS_ONE",
-                        "associatedWith": "chatroom",
-                        "targetName": "chatRoomLastMessageId"
+                        "associatedWith": [
+                            "id"
+                        ],
+                        "targetNames": [
+                            "chatRoomLastMessageId"
+                        ]
                     }
                 },
                 "createdAt": {
@@ -912,6 +1109,13 @@ export const schema = {
                     "isRequired": true,
                     "attributes": []
                 },
+                "chatroomID": {
+                    "name": "chatroomID",
+                    "isArray": false,
+                    "type": "ID",
+                    "isRequired": true,
+                    "attributes": []
+                },
                 "chatroom": {
                     "name": "chatroom",
                     "isArray": false,
@@ -922,8 +1126,17 @@ export const schema = {
                     "attributes": [],
                     "association": {
                         "connectionType": "BELONGS_TO",
-                        "targetName": "chatroomID"
+                        "targetNames": [
+                            "chatroomID"
+                        ]
                     }
+                },
+                "senderID": {
+                    "name": "senderID",
+                    "isArray": false,
+                    "type": "ID",
+                    "isRequired": true,
+                    "attributes": []
                 },
                 "sender": {
                     "name": "sender",
@@ -935,7 +1148,9 @@ export const schema = {
                     "attributes": [],
                     "association": {
                         "connectionType": "BELONGS_TO",
-                        "targetName": "senderID"
+                        "targetNames": [
+                            "senderID"
+                        ]
                     }
                 },
                 "seen": {
@@ -1029,6 +1244,27 @@ export const schema = {
                     "isRequired": true,
                     "attributes": []
                 },
+                "patientmodelID": {
+                    "name": "patientmodelID",
+                    "isArray": false,
+                    "type": "ID",
+                    "isRequired": true,
+                    "attributes": []
+                },
+                "doctormodelID": {
+                    "name": "doctormodelID",
+                    "isArray": false,
+                    "type": "ID",
+                    "isRequired": true,
+                    "attributes": []
+                },
+                "chatroomID": {
+                    "name": "chatroomID",
+                    "isArray": false,
+                    "type": "ID",
+                    "isRequired": true,
+                    "attributes": []
+                },
                 "patient": {
                     "name": "patient",
                     "isArray": false,
@@ -1039,7 +1275,9 @@ export const schema = {
                     "attributes": [],
                     "association": {
                         "connectionType": "BELONGS_TO",
-                        "targetName": "patientmodelID"
+                        "targetNames": [
+                            "patientmodelID"
+                        ]
                     }
                 },
                 "doctor": {
@@ -1052,7 +1290,9 @@ export const schema = {
                     "attributes": [],
                     "association": {
                         "connectionType": "BELONGS_TO",
-                        "targetName": "doctormodelID"
+                        "targetNames": [
+                            "doctormodelID"
+                        ]
                     }
                 },
                 "chatroom": {
@@ -1065,7 +1305,9 @@ export const schema = {
                     "attributes": [],
                     "association": {
                         "connectionType": "BELONGS_TO",
-                        "targetName": "chatroomID"
+                        "targetNames": [
+                            "chatroomID"
+                        ]
                     }
                 },
                 "messages": {
@@ -1079,7 +1321,9 @@ export const schema = {
                     "isArrayNullable": true,
                     "association": {
                         "connectionType": "HAS_MANY",
-                        "associatedWith": "sender"
+                        "associatedWith": [
+                            "sender"
+                        ]
                     }
                 },
                 "createdAt": {
@@ -1309,8 +1553,12 @@ export const schema = {
                     "attributes": [],
                     "association": {
                         "connectionType": "HAS_ONE",
-                        "associatedWith": "patient",
-                        "targetName": "patientModelChatParticipantId"
+                        "associatedWith": [
+                            "id"
+                        ],
+                        "targetNames": [
+                            "patientModelChatParticipantId"
+                        ]
                     }
                 },
                 "notifications": {
@@ -1324,7 +1572,9 @@ export const schema = {
                     "isArrayNullable": true,
                     "association": {
                         "connectionType": "HAS_MANY",
-                        "associatedWith": "patient"
+                        "associatedWith": [
+                            "patient"
+                        ]
                     }
                 },
                 "PatientVideoCalls": {
@@ -1338,7 +1588,9 @@ export const schema = {
                     "isArrayNullable": true,
                     "association": {
                         "connectionType": "HAS_MANY",
-                        "associatedWith": "patient"
+                        "associatedWith": [
+                            "patient"
+                        ]
                     }
                 },
                 "PatientAppointments": {
@@ -1352,7 +1604,9 @@ export const schema = {
                     "isArrayNullable": true,
                     "association": {
                         "connectionType": "HAS_MANY",
-                        "associatedWith": "patient"
+                        "associatedWith": [
+                            "patient"
+                        ]
                     }
                 },
                 "PatientReviews": {
@@ -1366,7 +1620,9 @@ export const schema = {
                     "isArrayNullable": true,
                     "association": {
                         "connectionType": "HAS_MANY",
-                        "associatedWith": "patient"
+                        "associatedWith": [
+                            "patient"
+                        ]
                     }
                 },
                 "createdAt": {
@@ -1475,6 +1731,114 @@ export const schema = {
             },
             "syncable": true,
             "pluralName": "DayTimeModels",
+            "attributes": [
+                {
+                    "type": "model",
+                    "properties": {}
+                },
+                {
+                    "type": "key",
+                    "properties": {
+                        "name": "byDoctorModel",
+                        "fields": [
+                            "doctormodelID"
+                        ]
+                    }
+                },
+                {
+                    "type": "auth",
+                    "properties": {
+                        "rules": [
+                            {
+                                "allow": "public",
+                                "operations": [
+                                    "create",
+                                    "update",
+                                    "delete",
+                                    "read"
+                                ]
+                            },
+                            {
+                                "provider": "userPools",
+                                "ownerField": "owner",
+                                "allow": "owner",
+                                "identityClaim": "cognito:username",
+                                "operations": [
+                                    "create",
+                                    "update",
+                                    "delete",
+                                    "read"
+                                ]
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        "ConsultationFeeModel": {
+            "name": "ConsultationFeeModel",
+            "fields": {
+                "id": {
+                    "name": "id",
+                    "isArray": false,
+                    "type": "ID",
+                    "isRequired": true,
+                    "attributes": []
+                },
+                "rateperminute": {
+                    "name": "rateperminute",
+                    "isArray": false,
+                    "type": "Float",
+                    "isRequired": false,
+                    "attributes": []
+                },
+                "timeframe": {
+                    "name": "timeframe",
+                    "isArray": false,
+                    "type": "String",
+                    "isRequired": false,
+                    "attributes": []
+                },
+                "consultationtype": {
+                    "name": "consultationtype",
+                    "isArray": false,
+                    "type": "String",
+                    "isRequired": false,
+                    "attributes": []
+                },
+                "doctormodelID": {
+                    "name": "doctormodelID",
+                    "isArray": false,
+                    "type": "ID",
+                    "isRequired": true,
+                    "attributes": []
+                },
+                "rate": {
+                    "name": "rate",
+                    "isArray": false,
+                    "type": "String",
+                    "isRequired": false,
+                    "attributes": []
+                },
+                "createdAt": {
+                    "name": "createdAt",
+                    "isArray": false,
+                    "type": "AWSDateTime",
+                    "isRequired": false,
+                    "attributes": [],
+                    "isReadOnly": true
+                },
+                "updatedAt": {
+                    "name": "updatedAt",
+                    "isArray": false,
+                    "type": "AWSDateTime",
+                    "isRequired": false,
+                    "attributes": [],
+                    "isReadOnly": true
+                }
+            },
+            "syncable": true,
+            "pluralName": "ConsultationFeeModels",
             "attributes": [
                 {
                     "type": "model",
@@ -1701,8 +2065,12 @@ export const schema = {
                     "attributes": [],
                     "association": {
                         "connectionType": "HAS_ONE",
-                        "associatedWith": "doctor",
-                        "targetName": "doctorModelChatParticipantId"
+                        "associatedWith": [
+                            "id"
+                        ],
+                        "targetNames": [
+                            "doctorModelChatParticipantId"
+                        ]
                     }
                 },
                 "notifications": {
@@ -1716,7 +2084,9 @@ export const schema = {
                     "isArrayNullable": true,
                     "association": {
                         "connectionType": "HAS_MANY",
-                        "associatedWith": "doctor"
+                        "associatedWith": [
+                            "doctor"
+                        ]
                     }
                 },
                 "DoctorDayTimeModel": {
@@ -1730,7 +2100,9 @@ export const schema = {
                     "isArrayNullable": true,
                     "association": {
                         "connectionType": "HAS_MANY",
-                        "associatedWith": "doctormodelID"
+                        "associatedWith": [
+                            "doctormodelID"
+                        ]
                     }
                 },
                 "DoctorConFeeModels": {
@@ -1744,7 +2116,9 @@ export const schema = {
                     "isArrayNullable": true,
                     "association": {
                         "connectionType": "HAS_MANY",
-                        "associatedWith": "doctormodelID"
+                        "associatedWith": [
+                            "doctormodelID"
+                        ]
                     }
                 },
                 "DoctorVideoCalls": {
@@ -1758,7 +2132,9 @@ export const schema = {
                     "isArrayNullable": true,
                     "association": {
                         "connectionType": "HAS_MANY",
-                        "associatedWith": "doctor"
+                        "associatedWith": [
+                            "doctor"
+                        ]
                     }
                 },
                 "DoctorAppointments": {
@@ -1772,7 +2148,9 @@ export const schema = {
                     "isArrayNullable": true,
                     "association": {
                         "connectionType": "HAS_MANY",
-                        "associatedWith": "doctor"
+                        "associatedWith": [
+                            "doctor"
+                        ]
                     }
                 },
                 "DoctorArticles": {
@@ -1786,7 +2164,9 @@ export const schema = {
                     "isArrayNullable": true,
                     "association": {
                         "connectionType": "HAS_MANY",
-                        "associatedWith": "doctor"
+                        "associatedWith": [
+                            "doctor"
+                        ]
                     }
                 },
                 "Reviews": {
@@ -1800,7 +2180,9 @@ export const schema = {
                     "isArrayNullable": true,
                     "association": {
                         "connectionType": "HAS_MANY",
-                        "associatedWith": "doctormodelID"
+                        "associatedWith": [
+                            "doctormodelID"
+                        ]
                     }
                 },
                 "createdAt": {
@@ -1856,5 +2238,5 @@ export const schema = {
     "enums": {},
     "nonModels": {},
     "codegenVersion": "3.4.4",
-    "version": "73b353d1fc63b63adddd3aaa948c0cae"
+    "version": "83795360b6311738ebbb24bda2aad2d8"
 };

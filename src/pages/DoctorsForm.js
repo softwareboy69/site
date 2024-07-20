@@ -204,6 +204,7 @@ const DoctorsForm = () => {
         workContact: data.workContact,
         country: data.country,
         city: data.city,
+        confirmed: false,
         license: data.licenseNumber,
         specialization: data.specialization,
         experience: data.experience,

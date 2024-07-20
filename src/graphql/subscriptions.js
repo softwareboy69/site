@@ -1,6 +1,228 @@
 /* eslint-disable */
 // this is an auto generated file. This will be overwritten
 
+export const onCreateVideoCall = /* GraphQL */ `
+  subscription OnCreateVideoCall(
+    $filter: ModelSubscriptionVideoCallFilterInput
+  ) {
+    onCreateVideoCall(filter: $filter) {
+      id
+      channelName
+      patientmodelID
+      doctormodelID
+      patient {
+        id
+        firstname
+        lastname
+        birthdate
+        email
+        homeaddress
+        country
+        city
+        race
+        gender
+        smokingstatus
+        drinkingstatus
+        disability
+        image
+        status
+        agreedtoterms
+        basicinfocompletion
+        medicalinfocompletion
+        devicetoken
+        createdAt
+        updatedAt
+        patientModelChatParticipantId
+        __typename
+      }
+      doctor {
+        id
+        firstname
+        lastname
+        email
+        country
+        city
+        license
+        specialization
+        experience
+        workplace
+        workAddress
+        workContact
+        about
+        image
+        status
+        qualifications
+        averagerating
+        ratings
+        basicinfocompletion
+        specialistinfocompletion
+        workinfocompletion
+        makePublic
+        confirmed
+        devicetoken
+        createdAt
+        updatedAt
+        doctorModelChatParticipantId
+        __typename
+      }
+      subscriberDeviceToken
+      createdAt
+      endedAt
+      picked
+      expiryTime
+      updatedAt
+      __typename
+    }
+  }
+`;
+export const onUpdateVideoCall = /* GraphQL */ `
+  subscription OnUpdateVideoCall(
+    $filter: ModelSubscriptionVideoCallFilterInput
+  ) {
+    onUpdateVideoCall(filter: $filter) {
+      id
+      channelName
+      patientmodelID
+      doctormodelID
+      patient {
+        id
+        firstname
+        lastname
+        birthdate
+        email
+        homeaddress
+        country
+        city
+        race
+        gender
+        smokingstatus
+        drinkingstatus
+        disability
+        image
+        status
+        agreedtoterms
+        basicinfocompletion
+        medicalinfocompletion
+        devicetoken
+        createdAt
+        updatedAt
+        patientModelChatParticipantId
+        __typename
+      }
+      doctor {
+        id
+        firstname
+        lastname
+        email
+        country
+        city
+        license
+        specialization
+        experience
+        workplace
+        workAddress
+        workContact
+        about
+        image
+        status
+        qualifications
+        averagerating
+        ratings
+        basicinfocompletion
+        specialistinfocompletion
+        workinfocompletion
+        makePublic
+        confirmed
+        devicetoken
+        createdAt
+        updatedAt
+        doctorModelChatParticipantId
+        __typename
+      }
+      subscriberDeviceToken
+      createdAt
+      endedAt
+      picked
+      expiryTime
+      updatedAt
+      __typename
+    }
+  }
+`;
+export const onDeleteVideoCall = /* GraphQL */ `
+  subscription OnDeleteVideoCall(
+    $filter: ModelSubscriptionVideoCallFilterInput
+  ) {
+    onDeleteVideoCall(filter: $filter) {
+      id
+      channelName
+      patientmodelID
+      doctormodelID
+      patient {
+        id
+        firstname
+        lastname
+        birthdate
+        email
+        homeaddress
+        country
+        city
+        race
+        gender
+        smokingstatus
+        drinkingstatus
+        disability
+        image
+        status
+        agreedtoterms
+        basicinfocompletion
+        medicalinfocompletion
+        devicetoken
+        createdAt
+        updatedAt
+        patientModelChatParticipantId
+        __typename
+      }
+      doctor {
+        id
+        firstname
+        lastname
+        email
+        country
+        city
+        license
+        specialization
+        experience
+        workplace
+        workAddress
+        workContact
+        about
+        image
+        status
+        qualifications
+        averagerating
+        ratings
+        basicinfocompletion
+        specialistinfocompletion
+        workinfocompletion
+        makePublic
+        confirmed
+        devicetoken
+        createdAt
+        updatedAt
+        doctorModelChatParticipantId
+        __typename
+      }
+      subscriberDeviceToken
+      createdAt
+      endedAt
+      picked
+      expiryTime
+      updatedAt
+      __typename
+    }
+  }
+`;
 export const onCreateArticle = /* GraphQL */ `
   subscription OnCreateArticle($filter: ModelSubscriptionArticleFilterInput) {
     onCreateArticle(filter: $filter) {
@@ -34,68 +256,14 @@ export const onCreateArticle = /* GraphQL */ `
         makePublic
         confirmed
         devicetoken
-        chatParticipant {
-          id
-          patientmodelID
-          doctormodelID
-          chatroomID
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-          owner
-          __typename
-        }
-        notifications {
-          nextToken
-          startedAt
-          __typename
-        }
-        DoctorDayTimeModel {
-          nextToken
-          startedAt
-          __typename
-        }
-        DoctorConFeeModels {
-          nextToken
-          startedAt
-          __typename
-        }
-        DoctorVideoCalls {
-          nextToken
-          startedAt
-          __typename
-        }
-        DoctorAppointments {
-          nextToken
-          startedAt
-          __typename
-        }
-        DoctorArticles {
-          nextToken
-          startedAt
-          __typename
-        }
-        Reviews {
-          nextToken
-          startedAt
-          __typename
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
         doctorModelChatParticipantId
         __typename
       }
       createdAt
       categories
       updatedAt
-      _version
-      _deleted
-      _lastChangedAt
       __typename
     }
   }
@@ -133,68 +301,14 @@ export const onUpdateArticle = /* GraphQL */ `
         makePublic
         confirmed
         devicetoken
-        chatParticipant {
-          id
-          patientmodelID
-          doctormodelID
-          chatroomID
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-          owner
-          __typename
-        }
-        notifications {
-          nextToken
-          startedAt
-          __typename
-        }
-        DoctorDayTimeModel {
-          nextToken
-          startedAt
-          __typename
-        }
-        DoctorConFeeModels {
-          nextToken
-          startedAt
-          __typename
-        }
-        DoctorVideoCalls {
-          nextToken
-          startedAt
-          __typename
-        }
-        DoctorAppointments {
-          nextToken
-          startedAt
-          __typename
-        }
-        DoctorArticles {
-          nextToken
-          startedAt
-          __typename
-        }
-        Reviews {
-          nextToken
-          startedAt
-          __typename
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
         doctorModelChatParticipantId
         __typename
       }
       createdAt
       categories
       updatedAt
-      _version
-      _deleted
-      _lastChangedAt
       __typename
     }
   }
@@ -232,68 +346,14 @@ export const onDeleteArticle = /* GraphQL */ `
         makePublic
         confirmed
         devicetoken
-        chatParticipant {
-          id
-          patientmodelID
-          doctormodelID
-          chatroomID
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-          owner
-          __typename
-        }
-        notifications {
-          nextToken
-          startedAt
-          __typename
-        }
-        DoctorDayTimeModel {
-          nextToken
-          startedAt
-          __typename
-        }
-        DoctorConFeeModels {
-          nextToken
-          startedAt
-          __typename
-        }
-        DoctorVideoCalls {
-          nextToken
-          startedAt
-          __typename
-        }
-        DoctorAppointments {
-          nextToken
-          startedAt
-          __typename
-        }
-        DoctorArticles {
-          nextToken
-          startedAt
-          __typename
-        }
-        Reviews {
-          nextToken
-          startedAt
-          __typename
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
         doctorModelChatParticipantId
         __typename
       }
       createdAt
       categories
       updatedAt
-      _version
-      _deleted
-      _lastChangedAt
       __typename
     }
   }
@@ -338,59 +398,8 @@ export const onCreateNotification = /* GraphQL */ `
         makePublic
         confirmed
         devicetoken
-        chatParticipant {
-          id
-          patientmodelID
-          doctormodelID
-          chatroomID
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-          owner
-          __typename
-        }
-        notifications {
-          nextToken
-          startedAt
-          __typename
-        }
-        DoctorDayTimeModel {
-          nextToken
-          startedAt
-          __typename
-        }
-        DoctorConFeeModels {
-          nextToken
-          startedAt
-          __typename
-        }
-        DoctorVideoCalls {
-          nextToken
-          startedAt
-          __typename
-        }
-        DoctorAppointments {
-          nextToken
-          startedAt
-          __typename
-        }
-        DoctorArticles {
-          nextToken
-          startedAt
-          __typename
-        }
-        Reviews {
-          nextToken
-          startedAt
-          __typename
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
         doctorModelChatParticipantId
         __typename
       }
@@ -414,53 +423,14 @@ export const onCreateNotification = /* GraphQL */ `
         basicinfocompletion
         medicalinfocompletion
         devicetoken
-        chatParticipant {
-          id
-          patientmodelID
-          doctormodelID
-          chatroomID
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-          owner
-          __typename
-        }
-        notifications {
-          nextToken
-          startedAt
-          __typename
-        }
-        PatientVideoCalls {
-          nextToken
-          startedAt
-          __typename
-        }
-        PatientAppointments {
-          nextToken
-          startedAt
-          __typename
-        }
-        PatientReviews {
-          nextToken
-          startedAt
-          __typename
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
         patientModelChatParticipantId
         __typename
       }
       createdAt
       receipientDeviceToken
       updatedAt
-      _version
-      _deleted
-      _lastChangedAt
       __typename
     }
   }
@@ -505,59 +475,8 @@ export const onUpdateNotification = /* GraphQL */ `
         makePublic
         confirmed
         devicetoken
-        chatParticipant {
-          id
-          patientmodelID
-          doctormodelID
-          chatroomID
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-          owner
-          __typename
-        }
-        notifications {
-          nextToken
-          startedAt
-          __typename
-        }
-        DoctorDayTimeModel {
-          nextToken
-          startedAt
-          __typename
-        }
-        DoctorConFeeModels {
-          nextToken
-          startedAt
-          __typename
-        }
-        DoctorVideoCalls {
-          nextToken
-          startedAt
-          __typename
-        }
-        DoctorAppointments {
-          nextToken
-          startedAt
-          __typename
-        }
-        DoctorArticles {
-          nextToken
-          startedAt
-          __typename
-        }
-        Reviews {
-          nextToken
-          startedAt
-          __typename
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
         doctorModelChatParticipantId
         __typename
       }
@@ -581,53 +500,14 @@ export const onUpdateNotification = /* GraphQL */ `
         basicinfocompletion
         medicalinfocompletion
         devicetoken
-        chatParticipant {
-          id
-          patientmodelID
-          doctormodelID
-          chatroomID
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-          owner
-          __typename
-        }
-        notifications {
-          nextToken
-          startedAt
-          __typename
-        }
-        PatientVideoCalls {
-          nextToken
-          startedAt
-          __typename
-        }
-        PatientAppointments {
-          nextToken
-          startedAt
-          __typename
-        }
-        PatientReviews {
-          nextToken
-          startedAt
-          __typename
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
         patientModelChatParticipantId
         __typename
       }
       createdAt
       receipientDeviceToken
       updatedAt
-      _version
-      _deleted
-      _lastChangedAt
       __typename
     }
   }
@@ -672,59 +552,8 @@ export const onDeleteNotification = /* GraphQL */ `
         makePublic
         confirmed
         devicetoken
-        chatParticipant {
-          id
-          patientmodelID
-          doctormodelID
-          chatroomID
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-          owner
-          __typename
-        }
-        notifications {
-          nextToken
-          startedAt
-          __typename
-        }
-        DoctorDayTimeModel {
-          nextToken
-          startedAt
-          __typename
-        }
-        DoctorConFeeModels {
-          nextToken
-          startedAt
-          __typename
-        }
-        DoctorVideoCalls {
-          nextToken
-          startedAt
-          __typename
-        }
-        DoctorAppointments {
-          nextToken
-          startedAt
-          __typename
-        }
-        DoctorArticles {
-          nextToken
-          startedAt
-          __typename
-        }
-        Reviews {
-          nextToken
-          startedAt
-          __typename
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
         doctorModelChatParticipantId
         __typename
       }
@@ -748,542 +577,14 @@ export const onDeleteNotification = /* GraphQL */ `
         basicinfocompletion
         medicalinfocompletion
         devicetoken
-        chatParticipant {
-          id
-          patientmodelID
-          doctormodelID
-          chatroomID
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-          owner
-          __typename
-        }
-        notifications {
-          nextToken
-          startedAt
-          __typename
-        }
-        PatientVideoCalls {
-          nextToken
-          startedAt
-          __typename
-        }
-        PatientAppointments {
-          nextToken
-          startedAt
-          __typename
-        }
-        PatientReviews {
-          nextToken
-          startedAt
-          __typename
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
         patientModelChatParticipantId
         __typename
       }
       createdAt
       receipientDeviceToken
       updatedAt
-      _version
-      _deleted
-      _lastChangedAt
-      __typename
-    }
-  }
-`;
-export const onCreateVideoCall = /* GraphQL */ `
-  subscription OnCreateVideoCall(
-    $filter: ModelSubscriptionVideoCallFilterInput
-  ) {
-    onCreateVideoCall(filter: $filter) {
-      id
-      channelName
-      patientmodelID
-      doctormodelID
-      patient {
-        id
-        firstname
-        lastname
-        birthdate
-        email
-        homeaddress
-        country
-        city
-        race
-        gender
-        smokingstatus
-        drinkingstatus
-        disability
-        image
-        status
-        agreedtoterms
-        basicinfocompletion
-        medicalinfocompletion
-        devicetoken
-        chatParticipant {
-          id
-          patientmodelID
-          doctormodelID
-          chatroomID
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-          owner
-          __typename
-        }
-        notifications {
-          nextToken
-          startedAt
-          __typename
-        }
-        PatientVideoCalls {
-          nextToken
-          startedAt
-          __typename
-        }
-        PatientAppointments {
-          nextToken
-          startedAt
-          __typename
-        }
-        PatientReviews {
-          nextToken
-          startedAt
-          __typename
-        }
-        createdAt
-        updatedAt
-        _version
-        _deleted
-        _lastChangedAt
-        patientModelChatParticipantId
-        __typename
-      }
-      doctor {
-        id
-        firstname
-        lastname
-        email
-        country
-        city
-        license
-        specialization
-        experience
-        workplace
-        workAddress
-        workContact
-        about
-        image
-        status
-        qualifications
-        averagerating
-        ratings
-        basicinfocompletion
-        specialistinfocompletion
-        workinfocompletion
-        makePublic
-        confirmed
-        devicetoken
-        chatParticipant {
-          id
-          patientmodelID
-          doctormodelID
-          chatroomID
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-          owner
-          __typename
-        }
-        notifications {
-          nextToken
-          startedAt
-          __typename
-        }
-        DoctorDayTimeModel {
-          nextToken
-          startedAt
-          __typename
-        }
-        DoctorConFeeModels {
-          nextToken
-          startedAt
-          __typename
-        }
-        DoctorVideoCalls {
-          nextToken
-          startedAt
-          __typename
-        }
-        DoctorAppointments {
-          nextToken
-          startedAt
-          __typename
-        }
-        DoctorArticles {
-          nextToken
-          startedAt
-          __typename
-        }
-        Reviews {
-          nextToken
-          startedAt
-          __typename
-        }
-        createdAt
-        updatedAt
-        _version
-        _deleted
-        _lastChangedAt
-        doctorModelChatParticipantId
-        __typename
-      }
-      subscriberDeviceToken
-      createdAt
-      picked
-      expiryTime
-      updatedAt
-      _version
-      _deleted
-      _lastChangedAt
-      __typename
-    }
-  }
-`;
-export const onUpdateVideoCall = /* GraphQL */ `
-  subscription OnUpdateVideoCall(
-    $filter: ModelSubscriptionVideoCallFilterInput
-  ) {
-    onUpdateVideoCall(filter: $filter) {
-      id
-      channelName
-      patientmodelID
-      doctormodelID
-      patient {
-        id
-        firstname
-        lastname
-        birthdate
-        email
-        homeaddress
-        country
-        city
-        race
-        gender
-        smokingstatus
-        drinkingstatus
-        disability
-        image
-        status
-        agreedtoterms
-        basicinfocompletion
-        medicalinfocompletion
-        devicetoken
-        chatParticipant {
-          id
-          patientmodelID
-          doctormodelID
-          chatroomID
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-          owner
-          __typename
-        }
-        notifications {
-          nextToken
-          startedAt
-          __typename
-        }
-        PatientVideoCalls {
-          nextToken
-          startedAt
-          __typename
-        }
-        PatientAppointments {
-          nextToken
-          startedAt
-          __typename
-        }
-        PatientReviews {
-          nextToken
-          startedAt
-          __typename
-        }
-        createdAt
-        updatedAt
-        _version
-        _deleted
-        _lastChangedAt
-        patientModelChatParticipantId
-        __typename
-      }
-      doctor {
-        id
-        firstname
-        lastname
-        email
-        country
-        city
-        license
-        specialization
-        experience
-        workplace
-        workAddress
-        workContact
-        about
-        image
-        status
-        qualifications
-        averagerating
-        ratings
-        basicinfocompletion
-        specialistinfocompletion
-        workinfocompletion
-        makePublic
-        confirmed
-        devicetoken
-        chatParticipant {
-          id
-          patientmodelID
-          doctormodelID
-          chatroomID
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-          owner
-          __typename
-        }
-        notifications {
-          nextToken
-          startedAt
-          __typename
-        }
-        DoctorDayTimeModel {
-          nextToken
-          startedAt
-          __typename
-        }
-        DoctorConFeeModels {
-          nextToken
-          startedAt
-          __typename
-        }
-        DoctorVideoCalls {
-          nextToken
-          startedAt
-          __typename
-        }
-        DoctorAppointments {
-          nextToken
-          startedAt
-          __typename
-        }
-        DoctorArticles {
-          nextToken
-          startedAt
-          __typename
-        }
-        Reviews {
-          nextToken
-          startedAt
-          __typename
-        }
-        createdAt
-        updatedAt
-        _version
-        _deleted
-        _lastChangedAt
-        doctorModelChatParticipantId
-        __typename
-      }
-      subscriberDeviceToken
-      createdAt
-      picked
-      expiryTime
-      updatedAt
-      _version
-      _deleted
-      _lastChangedAt
-      __typename
-    }
-  }
-`;
-export const onDeleteVideoCall = /* GraphQL */ `
-  subscription OnDeleteVideoCall(
-    $filter: ModelSubscriptionVideoCallFilterInput
-  ) {
-    onDeleteVideoCall(filter: $filter) {
-      id
-      channelName
-      patientmodelID
-      doctormodelID
-      patient {
-        id
-        firstname
-        lastname
-        birthdate
-        email
-        homeaddress
-        country
-        city
-        race
-        gender
-        smokingstatus
-        drinkingstatus
-        disability
-        image
-        status
-        agreedtoterms
-        basicinfocompletion
-        medicalinfocompletion
-        devicetoken
-        chatParticipant {
-          id
-          patientmodelID
-          doctormodelID
-          chatroomID
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-          owner
-          __typename
-        }
-        notifications {
-          nextToken
-          startedAt
-          __typename
-        }
-        PatientVideoCalls {
-          nextToken
-          startedAt
-          __typename
-        }
-        PatientAppointments {
-          nextToken
-          startedAt
-          __typename
-        }
-        PatientReviews {
-          nextToken
-          startedAt
-          __typename
-        }
-        createdAt
-        updatedAt
-        _version
-        _deleted
-        _lastChangedAt
-        patientModelChatParticipantId
-        __typename
-      }
-      doctor {
-        id
-        firstname
-        lastname
-        email
-        country
-        city
-        license
-        specialization
-        experience
-        workplace
-        workAddress
-        workContact
-        about
-        image
-        status
-        qualifications
-        averagerating
-        ratings
-        basicinfocompletion
-        specialistinfocompletion
-        workinfocompletion
-        makePublic
-        confirmed
-        devicetoken
-        chatParticipant {
-          id
-          patientmodelID
-          doctormodelID
-          chatroomID
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-          owner
-          __typename
-        }
-        notifications {
-          nextToken
-          startedAt
-          __typename
-        }
-        DoctorDayTimeModel {
-          nextToken
-          startedAt
-          __typename
-        }
-        DoctorConFeeModels {
-          nextToken
-          startedAt
-          __typename
-        }
-        DoctorVideoCalls {
-          nextToken
-          startedAt
-          __typename
-        }
-        DoctorAppointments {
-          nextToken
-          startedAt
-          __typename
-        }
-        DoctorArticles {
-          nextToken
-          startedAt
-          __typename
-        }
-        Reviews {
-          nextToken
-          startedAt
-          __typename
-        }
-        createdAt
-        updatedAt
-        _version
-        _deleted
-        _lastChangedAt
-        doctorModelChatParticipantId
-        __typename
-      }
-      subscriberDeviceToken
-      createdAt
-      picked
-      expiryTime
-      updatedAt
-      _version
-      _deleted
-      _lastChangedAt
       __typename
     }
   }
@@ -1316,52 +617,13 @@ export const onCreateReviews = /* GraphQL */ `
         basicinfocompletion
         medicalinfocompletion
         devicetoken
-        chatParticipant {
-          id
-          patientmodelID
-          doctormodelID
-          chatroomID
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-          owner
-          __typename
-        }
-        notifications {
-          nextToken
-          startedAt
-          __typename
-        }
-        PatientVideoCalls {
-          nextToken
-          startedAt
-          __typename
-        }
-        PatientAppointments {
-          nextToken
-          startedAt
-          __typename
-        }
-        PatientReviews {
-          nextToken
-          startedAt
-          __typename
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
         patientModelChatParticipantId
         __typename
       }
       createdAt
       updatedAt
-      _version
-      _deleted
-      _lastChangedAt
       __typename
     }
   }
@@ -1394,52 +656,13 @@ export const onUpdateReviews = /* GraphQL */ `
         basicinfocompletion
         medicalinfocompletion
         devicetoken
-        chatParticipant {
-          id
-          patientmodelID
-          doctormodelID
-          chatroomID
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-          owner
-          __typename
-        }
-        notifications {
-          nextToken
-          startedAt
-          __typename
-        }
-        PatientVideoCalls {
-          nextToken
-          startedAt
-          __typename
-        }
-        PatientAppointments {
-          nextToken
-          startedAt
-          __typename
-        }
-        PatientReviews {
-          nextToken
-          startedAt
-          __typename
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
         patientModelChatParticipantId
         __typename
       }
       createdAt
       updatedAt
-      _version
-      _deleted
-      _lastChangedAt
       __typename
     }
   }
@@ -1472,52 +695,13 @@ export const onDeleteReviews = /* GraphQL */ `
         basicinfocompletion
         medicalinfocompletion
         devicetoken
-        chatParticipant {
-          id
-          patientmodelID
-          doctormodelID
-          chatroomID
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-          owner
-          __typename
-        }
-        notifications {
-          nextToken
-          startedAt
-          __typename
-        }
-        PatientVideoCalls {
-          nextToken
-          startedAt
-          __typename
-        }
-        PatientAppointments {
-          nextToken
-          startedAt
-          __typename
-        }
-        PatientReviews {
-          nextToken
-          startedAt
-          __typename
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
         patientModelChatParticipantId
         __typename
       }
       createdAt
       updatedAt
-      _version
-      _deleted
-      _lastChangedAt
       __typename
     }
   }
@@ -1535,6 +719,7 @@ export const onCreateAppointment = /* GraphQL */ `
       month
       date
       timeframe
+      fee
       shortnote
       category
       status
@@ -1561,44 +746,8 @@ export const onCreateAppointment = /* GraphQL */ `
         basicinfocompletion
         medicalinfocompletion
         devicetoken
-        chatParticipant {
-          id
-          patientmodelID
-          doctormodelID
-          chatroomID
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-          owner
-          __typename
-        }
-        notifications {
-          nextToken
-          startedAt
-          __typename
-        }
-        PatientVideoCalls {
-          nextToken
-          startedAt
-          __typename
-        }
-        PatientAppointments {
-          nextToken
-          startedAt
-          __typename
-        }
-        PatientReviews {
-          nextToken
-          startedAt
-          __typename
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
         patientModelChatParticipantId
         __typename
       }
@@ -1627,67 +776,13 @@ export const onCreateAppointment = /* GraphQL */ `
         makePublic
         confirmed
         devicetoken
-        chatParticipant {
-          id
-          patientmodelID
-          doctormodelID
-          chatroomID
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-          owner
-          __typename
-        }
-        notifications {
-          nextToken
-          startedAt
-          __typename
-        }
-        DoctorDayTimeModel {
-          nextToken
-          startedAt
-          __typename
-        }
-        DoctorConFeeModels {
-          nextToken
-          startedAt
-          __typename
-        }
-        DoctorVideoCalls {
-          nextToken
-          startedAt
-          __typename
-        }
-        DoctorAppointments {
-          nextToken
-          startedAt
-          __typename
-        }
-        DoctorArticles {
-          nextToken
-          startedAt
-          __typename
-        }
-        Reviews {
-          nextToken
-          startedAt
-          __typename
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
         doctorModelChatParticipantId
         __typename
       }
       createdAt
       updatedAt
-      _version
-      _deleted
-      _lastChangedAt
       __typename
     }
   }
@@ -1705,6 +800,7 @@ export const onUpdateAppointment = /* GraphQL */ `
       month
       date
       timeframe
+      fee
       shortnote
       category
       status
@@ -1731,44 +827,8 @@ export const onUpdateAppointment = /* GraphQL */ `
         basicinfocompletion
         medicalinfocompletion
         devicetoken
-        chatParticipant {
-          id
-          patientmodelID
-          doctormodelID
-          chatroomID
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-          owner
-          __typename
-        }
-        notifications {
-          nextToken
-          startedAt
-          __typename
-        }
-        PatientVideoCalls {
-          nextToken
-          startedAt
-          __typename
-        }
-        PatientAppointments {
-          nextToken
-          startedAt
-          __typename
-        }
-        PatientReviews {
-          nextToken
-          startedAt
-          __typename
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
         patientModelChatParticipantId
         __typename
       }
@@ -1797,67 +857,13 @@ export const onUpdateAppointment = /* GraphQL */ `
         makePublic
         confirmed
         devicetoken
-        chatParticipant {
-          id
-          patientmodelID
-          doctormodelID
-          chatroomID
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-          owner
-          __typename
-        }
-        notifications {
-          nextToken
-          startedAt
-          __typename
-        }
-        DoctorDayTimeModel {
-          nextToken
-          startedAt
-          __typename
-        }
-        DoctorConFeeModels {
-          nextToken
-          startedAt
-          __typename
-        }
-        DoctorVideoCalls {
-          nextToken
-          startedAt
-          __typename
-        }
-        DoctorAppointments {
-          nextToken
-          startedAt
-          __typename
-        }
-        DoctorArticles {
-          nextToken
-          startedAt
-          __typename
-        }
-        Reviews {
-          nextToken
-          startedAt
-          __typename
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
         doctorModelChatParticipantId
         __typename
       }
       createdAt
       updatedAt
-      _version
-      _deleted
-      _lastChangedAt
       __typename
     }
   }
@@ -1875,6 +881,7 @@ export const onDeleteAppointment = /* GraphQL */ `
       month
       date
       timeframe
+      fee
       shortnote
       category
       status
@@ -1901,44 +908,8 @@ export const onDeleteAppointment = /* GraphQL */ `
         basicinfocompletion
         medicalinfocompletion
         devicetoken
-        chatParticipant {
-          id
-          patientmodelID
-          doctormodelID
-          chatroomID
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-          owner
-          __typename
-        }
-        notifications {
-          nextToken
-          startedAt
-          __typename
-        }
-        PatientVideoCalls {
-          nextToken
-          startedAt
-          __typename
-        }
-        PatientAppointments {
-          nextToken
-          startedAt
-          __typename
-        }
-        PatientReviews {
-          nextToken
-          startedAt
-          __typename
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
         patientModelChatParticipantId
         __typename
       }
@@ -1967,1546 +938,13 @@ export const onDeleteAppointment = /* GraphQL */ `
         makePublic
         confirmed
         devicetoken
-        chatParticipant {
-          id
-          patientmodelID
-          doctormodelID
-          chatroomID
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-          owner
-          __typename
-        }
-        notifications {
-          nextToken
-          startedAt
-          __typename
-        }
-        DoctorDayTimeModel {
-          nextToken
-          startedAt
-          __typename
-        }
-        DoctorConFeeModels {
-          nextToken
-          startedAt
-          __typename
-        }
-        DoctorVideoCalls {
-          nextToken
-          startedAt
-          __typename
-        }
-        DoctorAppointments {
-          nextToken
-          startedAt
-          __typename
-        }
-        DoctorArticles {
-          nextToken
-          startedAt
-          __typename
-        }
-        Reviews {
-          nextToken
-          startedAt
-          __typename
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
         doctorModelChatParticipantId
         __typename
       }
       createdAt
       updatedAt
-      _version
-      _deleted
-      _lastChangedAt
-      __typename
-    }
-  }
-`;
-export const onCreateConsultationFeeModel = /* GraphQL */ `
-  subscription OnCreateConsultationFeeModel(
-    $filter: ModelSubscriptionConsultationFeeModelFilterInput
-    $owner: String
-  ) {
-    onCreateConsultationFeeModel(filter: $filter, owner: $owner) {
-      id
-      rateperminute
-      timeframe
-      consultationtype
-      doctormodelID
-      rate
-      createdAt
-      updatedAt
-      _version
-      _deleted
-      _lastChangedAt
-      owner
-      __typename
-    }
-  }
-`;
-export const onUpdateConsultationFeeModel = /* GraphQL */ `
-  subscription OnUpdateConsultationFeeModel(
-    $filter: ModelSubscriptionConsultationFeeModelFilterInput
-    $owner: String
-  ) {
-    onUpdateConsultationFeeModel(filter: $filter, owner: $owner) {
-      id
-      rateperminute
-      timeframe
-      consultationtype
-      doctormodelID
-      rate
-      createdAt
-      updatedAt
-      _version
-      _deleted
-      _lastChangedAt
-      owner
-      __typename
-    }
-  }
-`;
-export const onDeleteConsultationFeeModel = /* GraphQL */ `
-  subscription OnDeleteConsultationFeeModel(
-    $filter: ModelSubscriptionConsultationFeeModelFilterInput
-    $owner: String
-  ) {
-    onDeleteConsultationFeeModel(filter: $filter, owner: $owner) {
-      id
-      rateperminute
-      timeframe
-      consultationtype
-      doctormodelID
-      rate
-      createdAt
-      updatedAt
-      _version
-      _deleted
-      _lastChangedAt
-      owner
-      __typename
-    }
-  }
-`;
-export const onCreateChatRoom = /* GraphQL */ `
-  subscription OnCreateChatRoom(
-    $filter: ModelSubscriptionChatRoomFilterInput
-    $owner: String
-  ) {
-    onCreateChatRoom(filter: $filter, owner: $owner) {
-      id
-      name
-      image
-      participants {
-        items {
-          id
-          patientmodelID
-          doctormodelID
-          chatroomID
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-          owner
-          __typename
-        }
-        nextToken
-        startedAt
-        __typename
-      }
-      messages {
-        items {
-          id
-          text
-          createdAt
-          chatroomID
-          senderID
-          seen
-          images
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-          owner
-          __typename
-        }
-        nextToken
-        startedAt
-        __typename
-      }
-      lastMessage {
-        id
-        text
-        createdAt
-        chatroomID
-        chatroom {
-          id
-          name
-          image
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-          chatRoomLastMessageId
-          owner
-          __typename
-        }
-        senderID
-        sender {
-          id
-          patientmodelID
-          doctormodelID
-          chatroomID
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-          owner
-          __typename
-        }
-        seen
-        images
-        updatedAt
-        _version
-        _deleted
-        _lastChangedAt
-        owner
-        __typename
-      }
-      createdAt
-      updatedAt
-      _version
-      _deleted
-      _lastChangedAt
-      chatRoomLastMessageId
-      owner
-      __typename
-    }
-  }
-`;
-export const onUpdateChatRoom = /* GraphQL */ `
-  subscription OnUpdateChatRoom(
-    $filter: ModelSubscriptionChatRoomFilterInput
-    $owner: String
-  ) {
-    onUpdateChatRoom(filter: $filter, owner: $owner) {
-      id
-      name
-      image
-      participants {
-        items {
-          id
-          patientmodelID
-          doctormodelID
-          chatroomID
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-          owner
-          __typename
-        }
-        nextToken
-        startedAt
-        __typename
-      }
-      messages {
-        items {
-          id
-          text
-          createdAt
-          chatroomID
-          senderID
-          seen
-          images
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-          owner
-          __typename
-        }
-        nextToken
-        startedAt
-        __typename
-      }
-      lastMessage {
-        id
-        text
-        createdAt
-        chatroomID
-        chatroom {
-          id
-          name
-          image
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-          chatRoomLastMessageId
-          owner
-          __typename
-        }
-        senderID
-        sender {
-          id
-          patientmodelID
-          doctormodelID
-          chatroomID
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-          owner
-          __typename
-        }
-        seen
-        images
-        updatedAt
-        _version
-        _deleted
-        _lastChangedAt
-        owner
-        __typename
-      }
-      createdAt
-      updatedAt
-      _version
-      _deleted
-      _lastChangedAt
-      chatRoomLastMessageId
-      owner
-      __typename
-    }
-  }
-`;
-export const onDeleteChatRoom = /* GraphQL */ `
-  subscription OnDeleteChatRoom(
-    $filter: ModelSubscriptionChatRoomFilterInput
-    $owner: String
-  ) {
-    onDeleteChatRoom(filter: $filter, owner: $owner) {
-      id
-      name
-      image
-      participants {
-        items {
-          id
-          patientmodelID
-          doctormodelID
-          chatroomID
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-          owner
-          __typename
-        }
-        nextToken
-        startedAt
-        __typename
-      }
-      messages {
-        items {
-          id
-          text
-          createdAt
-          chatroomID
-          senderID
-          seen
-          images
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-          owner
-          __typename
-        }
-        nextToken
-        startedAt
-        __typename
-      }
-      lastMessage {
-        id
-        text
-        createdAt
-        chatroomID
-        chatroom {
-          id
-          name
-          image
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-          chatRoomLastMessageId
-          owner
-          __typename
-        }
-        senderID
-        sender {
-          id
-          patientmodelID
-          doctormodelID
-          chatroomID
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-          owner
-          __typename
-        }
-        seen
-        images
-        updatedAt
-        _version
-        _deleted
-        _lastChangedAt
-        owner
-        __typename
-      }
-      createdAt
-      updatedAt
-      _version
-      _deleted
-      _lastChangedAt
-      chatRoomLastMessageId
-      owner
-      __typename
-    }
-  }
-`;
-export const onCreateMessage = /* GraphQL */ `
-  subscription OnCreateMessage(
-    $filter: ModelSubscriptionMessageFilterInput
-    $owner: String
-  ) {
-    onCreateMessage(filter: $filter, owner: $owner) {
-      id
-      text
-      createdAt
-      chatroomID
-      chatroom {
-        id
-        name
-        image
-        participants {
-          nextToken
-          startedAt
-          __typename
-        }
-        messages {
-          nextToken
-          startedAt
-          __typename
-        }
-        lastMessage {
-          id
-          text
-          createdAt
-          chatroomID
-          senderID
-          seen
-          images
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-          owner
-          __typename
-        }
-        createdAt
-        updatedAt
-        _version
-        _deleted
-        _lastChangedAt
-        chatRoomLastMessageId
-        owner
-        __typename
-      }
-      senderID
-      sender {
-        id
-        patientmodelID
-        doctormodelID
-        chatroomID
-        patient {
-          id
-          firstname
-          lastname
-          birthdate
-          email
-          homeaddress
-          country
-          city
-          race
-          gender
-          smokingstatus
-          drinkingstatus
-          disability
-          image
-          status
-          agreedtoterms
-          basicinfocompletion
-          medicalinfocompletion
-          devicetoken
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-          patientModelChatParticipantId
-          __typename
-        }
-        doctor {
-          id
-          firstname
-          lastname
-          email
-          country
-          city
-          license
-          specialization
-          experience
-          workplace
-          workAddress
-          workContact
-          about
-          image
-          status
-          qualifications
-          averagerating
-          ratings
-          basicinfocompletion
-          specialistinfocompletion
-          workinfocompletion
-          makePublic
-          confirmed
-          devicetoken
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-          doctorModelChatParticipantId
-          __typename
-        }
-        chatroom {
-          id
-          name
-          image
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-          chatRoomLastMessageId
-          owner
-          __typename
-        }
-        messages {
-          nextToken
-          startedAt
-          __typename
-        }
-        createdAt
-        updatedAt
-        _version
-        _deleted
-        _lastChangedAt
-        owner
-        __typename
-      }
-      seen
-      images
-      updatedAt
-      _version
-      _deleted
-      _lastChangedAt
-      owner
-      __typename
-    }
-  }
-`;
-export const onUpdateMessage = /* GraphQL */ `
-  subscription OnUpdateMessage(
-    $filter: ModelSubscriptionMessageFilterInput
-    $owner: String
-  ) {
-    onUpdateMessage(filter: $filter, owner: $owner) {
-      id
-      text
-      createdAt
-      chatroomID
-      chatroom {
-        id
-        name
-        image
-        participants {
-          nextToken
-          startedAt
-          __typename
-        }
-        messages {
-          nextToken
-          startedAt
-          __typename
-        }
-        lastMessage {
-          id
-          text
-          createdAt
-          chatroomID
-          senderID
-          seen
-          images
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-          owner
-          __typename
-        }
-        createdAt
-        updatedAt
-        _version
-        _deleted
-        _lastChangedAt
-        chatRoomLastMessageId
-        owner
-        __typename
-      }
-      senderID
-      sender {
-        id
-        patientmodelID
-        doctormodelID
-        chatroomID
-        patient {
-          id
-          firstname
-          lastname
-          birthdate
-          email
-          homeaddress
-          country
-          city
-          race
-          gender
-          smokingstatus
-          drinkingstatus
-          disability
-          image
-          status
-          agreedtoterms
-          basicinfocompletion
-          medicalinfocompletion
-          devicetoken
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-          patientModelChatParticipantId
-          __typename
-        }
-        doctor {
-          id
-          firstname
-          lastname
-          email
-          country
-          city
-          license
-          specialization
-          experience
-          workplace
-          workAddress
-          workContact
-          about
-          image
-          status
-          qualifications
-          averagerating
-          ratings
-          basicinfocompletion
-          specialistinfocompletion
-          workinfocompletion
-          makePublic
-          confirmed
-          devicetoken
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-          doctorModelChatParticipantId
-          __typename
-        }
-        chatroom {
-          id
-          name
-          image
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-          chatRoomLastMessageId
-          owner
-          __typename
-        }
-        messages {
-          nextToken
-          startedAt
-          __typename
-        }
-        createdAt
-        updatedAt
-        _version
-        _deleted
-        _lastChangedAt
-        owner
-        __typename
-      }
-      seen
-      images
-      updatedAt
-      _version
-      _deleted
-      _lastChangedAt
-      owner
-      __typename
-    }
-  }
-`;
-export const onDeleteMessage = /* GraphQL */ `
-  subscription OnDeleteMessage(
-    $filter: ModelSubscriptionMessageFilterInput
-    $owner: String
-  ) {
-    onDeleteMessage(filter: $filter, owner: $owner) {
-      id
-      text
-      createdAt
-      chatroomID
-      chatroom {
-        id
-        name
-        image
-        participants {
-          nextToken
-          startedAt
-          __typename
-        }
-        messages {
-          nextToken
-          startedAt
-          __typename
-        }
-        lastMessage {
-          id
-          text
-          createdAt
-          chatroomID
-          senderID
-          seen
-          images
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-          owner
-          __typename
-        }
-        createdAt
-        updatedAt
-        _version
-        _deleted
-        _lastChangedAt
-        chatRoomLastMessageId
-        owner
-        __typename
-      }
-      senderID
-      sender {
-        id
-        patientmodelID
-        doctormodelID
-        chatroomID
-        patient {
-          id
-          firstname
-          lastname
-          birthdate
-          email
-          homeaddress
-          country
-          city
-          race
-          gender
-          smokingstatus
-          drinkingstatus
-          disability
-          image
-          status
-          agreedtoterms
-          basicinfocompletion
-          medicalinfocompletion
-          devicetoken
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-          patientModelChatParticipantId
-          __typename
-        }
-        doctor {
-          id
-          firstname
-          lastname
-          email
-          country
-          city
-          license
-          specialization
-          experience
-          workplace
-          workAddress
-          workContact
-          about
-          image
-          status
-          qualifications
-          averagerating
-          ratings
-          basicinfocompletion
-          specialistinfocompletion
-          workinfocompletion
-          makePublic
-          confirmed
-          devicetoken
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-          doctorModelChatParticipantId
-          __typename
-        }
-        chatroom {
-          id
-          name
-          image
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-          chatRoomLastMessageId
-          owner
-          __typename
-        }
-        messages {
-          nextToken
-          startedAt
-          __typename
-        }
-        createdAt
-        updatedAt
-        _version
-        _deleted
-        _lastChangedAt
-        owner
-        __typename
-      }
-      seen
-      images
-      updatedAt
-      _version
-      _deleted
-      _lastChangedAt
-      owner
-      __typename
-    }
-  }
-`;
-export const onCreateChatParticipant = /* GraphQL */ `
-  subscription OnCreateChatParticipant(
-    $filter: ModelSubscriptionChatParticipantFilterInput
-    $owner: String
-  ) {
-    onCreateChatParticipant(filter: $filter, owner: $owner) {
-      id
-      patientmodelID
-      doctormodelID
-      chatroomID
-      patient {
-        id
-        firstname
-        lastname
-        birthdate
-        email
-        homeaddress
-        country
-        city
-        race
-        gender
-        smokingstatus
-        drinkingstatus
-        disability
-        image
-        status
-        agreedtoterms
-        basicinfocompletion
-        medicalinfocompletion
-        devicetoken
-        chatParticipant {
-          id
-          patientmodelID
-          doctormodelID
-          chatroomID
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-          owner
-          __typename
-        }
-        notifications {
-          nextToken
-          startedAt
-          __typename
-        }
-        PatientVideoCalls {
-          nextToken
-          startedAt
-          __typename
-        }
-        PatientAppointments {
-          nextToken
-          startedAt
-          __typename
-        }
-        PatientReviews {
-          nextToken
-          startedAt
-          __typename
-        }
-        createdAt
-        updatedAt
-        _version
-        _deleted
-        _lastChangedAt
-        patientModelChatParticipantId
-        __typename
-      }
-      doctor {
-        id
-        firstname
-        lastname
-        email
-        country
-        city
-        license
-        specialization
-        experience
-        workplace
-        workAddress
-        workContact
-        about
-        image
-        status
-        qualifications
-        averagerating
-        ratings
-        basicinfocompletion
-        specialistinfocompletion
-        workinfocompletion
-        makePublic
-        confirmed
-        devicetoken
-        chatParticipant {
-          id
-          patientmodelID
-          doctormodelID
-          chatroomID
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-          owner
-          __typename
-        }
-        notifications {
-          nextToken
-          startedAt
-          __typename
-        }
-        DoctorDayTimeModel {
-          nextToken
-          startedAt
-          __typename
-        }
-        DoctorConFeeModels {
-          nextToken
-          startedAt
-          __typename
-        }
-        DoctorVideoCalls {
-          nextToken
-          startedAt
-          __typename
-        }
-        DoctorAppointments {
-          nextToken
-          startedAt
-          __typename
-        }
-        DoctorArticles {
-          nextToken
-          startedAt
-          __typename
-        }
-        Reviews {
-          nextToken
-          startedAt
-          __typename
-        }
-        createdAt
-        updatedAt
-        _version
-        _deleted
-        _lastChangedAt
-        doctorModelChatParticipantId
-        __typename
-      }
-      chatroom {
-        id
-        name
-        image
-        participants {
-          nextToken
-          startedAt
-          __typename
-        }
-        messages {
-          nextToken
-          startedAt
-          __typename
-        }
-        lastMessage {
-          id
-          text
-          createdAt
-          chatroomID
-          senderID
-          seen
-          images
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-          owner
-          __typename
-        }
-        createdAt
-        updatedAt
-        _version
-        _deleted
-        _lastChangedAt
-        chatRoomLastMessageId
-        owner
-        __typename
-      }
-      messages {
-        items {
-          id
-          text
-          createdAt
-          chatroomID
-          senderID
-          seen
-          images
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-          owner
-          __typename
-        }
-        nextToken
-        startedAt
-        __typename
-      }
-      createdAt
-      updatedAt
-      _version
-      _deleted
-      _lastChangedAt
-      owner
-      __typename
-    }
-  }
-`;
-export const onUpdateChatParticipant = /* GraphQL */ `
-  subscription OnUpdateChatParticipant(
-    $filter: ModelSubscriptionChatParticipantFilterInput
-    $owner: String
-  ) {
-    onUpdateChatParticipant(filter: $filter, owner: $owner) {
-      id
-      patientmodelID
-      doctormodelID
-      chatroomID
-      patient {
-        id
-        firstname
-        lastname
-        birthdate
-        email
-        homeaddress
-        country
-        city
-        race
-        gender
-        smokingstatus
-        drinkingstatus
-        disability
-        image
-        status
-        agreedtoterms
-        basicinfocompletion
-        medicalinfocompletion
-        devicetoken
-        chatParticipant {
-          id
-          patientmodelID
-          doctormodelID
-          chatroomID
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-          owner
-          __typename
-        }
-        notifications {
-          nextToken
-          startedAt
-          __typename
-        }
-        PatientVideoCalls {
-          nextToken
-          startedAt
-          __typename
-        }
-        PatientAppointments {
-          nextToken
-          startedAt
-          __typename
-        }
-        PatientReviews {
-          nextToken
-          startedAt
-          __typename
-        }
-        createdAt
-        updatedAt
-        _version
-        _deleted
-        _lastChangedAt
-        patientModelChatParticipantId
-        __typename
-      }
-      doctor {
-        id
-        firstname
-        lastname
-        email
-        country
-        city
-        license
-        specialization
-        experience
-        workplace
-        workAddress
-        workContact
-        about
-        image
-        status
-        qualifications
-        averagerating
-        ratings
-        basicinfocompletion
-        specialistinfocompletion
-        workinfocompletion
-        makePublic
-        confirmed
-        devicetoken
-        chatParticipant {
-          id
-          patientmodelID
-          doctormodelID
-          chatroomID
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-          owner
-          __typename
-        }
-        notifications {
-          nextToken
-          startedAt
-          __typename
-        }
-        DoctorDayTimeModel {
-          nextToken
-          startedAt
-          __typename
-        }
-        DoctorConFeeModels {
-          nextToken
-          startedAt
-          __typename
-        }
-        DoctorVideoCalls {
-          nextToken
-          startedAt
-          __typename
-        }
-        DoctorAppointments {
-          nextToken
-          startedAt
-          __typename
-        }
-        DoctorArticles {
-          nextToken
-          startedAt
-          __typename
-        }
-        Reviews {
-          nextToken
-          startedAt
-          __typename
-        }
-        createdAt
-        updatedAt
-        _version
-        _deleted
-        _lastChangedAt
-        doctorModelChatParticipantId
-        __typename
-      }
-      chatroom {
-        id
-        name
-        image
-        participants {
-          nextToken
-          startedAt
-          __typename
-        }
-        messages {
-          nextToken
-          startedAt
-          __typename
-        }
-        lastMessage {
-          id
-          text
-          createdAt
-          chatroomID
-          senderID
-          seen
-          images
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-          owner
-          __typename
-        }
-        createdAt
-        updatedAt
-        _version
-        _deleted
-        _lastChangedAt
-        chatRoomLastMessageId
-        owner
-        __typename
-      }
-      messages {
-        items {
-          id
-          text
-          createdAt
-          chatroomID
-          senderID
-          seen
-          images
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-          owner
-          __typename
-        }
-        nextToken
-        startedAt
-        __typename
-      }
-      createdAt
-      updatedAt
-      _version
-      _deleted
-      _lastChangedAt
-      owner
-      __typename
-    }
-  }
-`;
-export const onDeleteChatParticipant = /* GraphQL */ `
-  subscription OnDeleteChatParticipant(
-    $filter: ModelSubscriptionChatParticipantFilterInput
-    $owner: String
-  ) {
-    onDeleteChatParticipant(filter: $filter, owner: $owner) {
-      id
-      patientmodelID
-      doctormodelID
-      chatroomID
-      patient {
-        id
-        firstname
-        lastname
-        birthdate
-        email
-        homeaddress
-        country
-        city
-        race
-        gender
-        smokingstatus
-        drinkingstatus
-        disability
-        image
-        status
-        agreedtoterms
-        basicinfocompletion
-        medicalinfocompletion
-        devicetoken
-        chatParticipant {
-          id
-          patientmodelID
-          doctormodelID
-          chatroomID
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-          owner
-          __typename
-        }
-        notifications {
-          nextToken
-          startedAt
-          __typename
-        }
-        PatientVideoCalls {
-          nextToken
-          startedAt
-          __typename
-        }
-        PatientAppointments {
-          nextToken
-          startedAt
-          __typename
-        }
-        PatientReviews {
-          nextToken
-          startedAt
-          __typename
-        }
-        createdAt
-        updatedAt
-        _version
-        _deleted
-        _lastChangedAt
-        patientModelChatParticipantId
-        __typename
-      }
-      doctor {
-        id
-        firstname
-        lastname
-        email
-        country
-        city
-        license
-        specialization
-        experience
-        workplace
-        workAddress
-        workContact
-        about
-        image
-        status
-        qualifications
-        averagerating
-        ratings
-        basicinfocompletion
-        specialistinfocompletion
-        workinfocompletion
-        makePublic
-        confirmed
-        devicetoken
-        chatParticipant {
-          id
-          patientmodelID
-          doctormodelID
-          chatroomID
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-          owner
-          __typename
-        }
-        notifications {
-          nextToken
-          startedAt
-          __typename
-        }
-        DoctorDayTimeModel {
-          nextToken
-          startedAt
-          __typename
-        }
-        DoctorConFeeModels {
-          nextToken
-          startedAt
-          __typename
-        }
-        DoctorVideoCalls {
-          nextToken
-          startedAt
-          __typename
-        }
-        DoctorAppointments {
-          nextToken
-          startedAt
-          __typename
-        }
-        DoctorArticles {
-          nextToken
-          startedAt
-          __typename
-        }
-        Reviews {
-          nextToken
-          startedAt
-          __typename
-        }
-        createdAt
-        updatedAt
-        _version
-        _deleted
-        _lastChangedAt
-        doctorModelChatParticipantId
-        __typename
-      }
-      chatroom {
-        id
-        name
-        image
-        participants {
-          nextToken
-          startedAt
-          __typename
-        }
-        messages {
-          nextToken
-          startedAt
-          __typename
-        }
-        lastMessage {
-          id
-          text
-          createdAt
-          chatroomID
-          senderID
-          seen
-          images
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-          owner
-          __typename
-        }
-        createdAt
-        updatedAt
-        _version
-        _deleted
-        _lastChangedAt
-        chatRoomLastMessageId
-        owner
-        __typename
-      }
-      messages {
-        items {
-          id
-          text
-          createdAt
-          chatroomID
-          senderID
-          seen
-          images
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-          owner
-          __typename
-        }
-        nextToken
-        startedAt
-        __typename
-      }
-      createdAt
-      updatedAt
-      _version
-      _deleted
-      _lastChangedAt
-      owner
       __typename
     }
   }
@@ -3540,187 +978,29 @@ export const onCreatePatientModel = /* GraphQL */ `
         patientmodelID
         doctormodelID
         chatroomID
-        patient {
-          id
-          firstname
-          lastname
-          birthdate
-          email
-          homeaddress
-          country
-          city
-          race
-          gender
-          smokingstatus
-          drinkingstatus
-          disability
-          image
-          status
-          agreedtoterms
-          basicinfocompletion
-          medicalinfocompletion
-          devicetoken
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-          patientModelChatParticipantId
-          __typename
-        }
-        doctor {
-          id
-          firstname
-          lastname
-          email
-          country
-          city
-          license
-          specialization
-          experience
-          workplace
-          workAddress
-          workContact
-          about
-          image
-          status
-          qualifications
-          averagerating
-          ratings
-          basicinfocompletion
-          specialistinfocompletion
-          workinfocompletion
-          makePublic
-          confirmed
-          devicetoken
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-          doctorModelChatParticipantId
-          __typename
-        }
-        chatroom {
-          id
-          name
-          image
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-          chatRoomLastMessageId
-          owner
-          __typename
-        }
-        messages {
-          nextToken
-          startedAt
-          __typename
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
         owner
         __typename
       }
       notifications {
-        items {
-          id
-          title
-          contentMessage
-          sourceType
-          navigationID
-          action
-          image
-          seen
-          doctormodelID
-          patientmodelID
-          createdAt
-          receipientDeviceToken
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-          __typename
-        }
         nextToken
-        startedAt
         __typename
       }
       PatientVideoCalls {
-        items {
-          id
-          channelName
-          patientmodelID
-          doctormodelID
-          subscriberDeviceToken
-          createdAt
-          picked
-          expiryTime
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-          __typename
-        }
         nextToken
-        startedAt
         __typename
       }
       PatientAppointments {
-        items {
-          id
-          consultationtype
-          starthour
-          endhour
-          day
-          month
-          date
-          timeframe
-          shortnote
-          category
-          status
-          countdown
-          doctormodelID
-          patientmodelID
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-          __typename
-        }
         nextToken
-        startedAt
         __typename
       }
       PatientReviews {
-        items {
-          id
-          reviewtext
-          ratings
-          patientmodelID
-          doctormodelID
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-          __typename
-        }
         nextToken
-        startedAt
         __typename
       }
       createdAt
       updatedAt
-      _version
-      _deleted
-      _lastChangedAt
       patientModelChatParticipantId
       __typename
     }
@@ -3755,187 +1035,29 @@ export const onUpdatePatientModel = /* GraphQL */ `
         patientmodelID
         doctormodelID
         chatroomID
-        patient {
-          id
-          firstname
-          lastname
-          birthdate
-          email
-          homeaddress
-          country
-          city
-          race
-          gender
-          smokingstatus
-          drinkingstatus
-          disability
-          image
-          status
-          agreedtoterms
-          basicinfocompletion
-          medicalinfocompletion
-          devicetoken
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-          patientModelChatParticipantId
-          __typename
-        }
-        doctor {
-          id
-          firstname
-          lastname
-          email
-          country
-          city
-          license
-          specialization
-          experience
-          workplace
-          workAddress
-          workContact
-          about
-          image
-          status
-          qualifications
-          averagerating
-          ratings
-          basicinfocompletion
-          specialistinfocompletion
-          workinfocompletion
-          makePublic
-          confirmed
-          devicetoken
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-          doctorModelChatParticipantId
-          __typename
-        }
-        chatroom {
-          id
-          name
-          image
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-          chatRoomLastMessageId
-          owner
-          __typename
-        }
-        messages {
-          nextToken
-          startedAt
-          __typename
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
         owner
         __typename
       }
       notifications {
-        items {
-          id
-          title
-          contentMessage
-          sourceType
-          navigationID
-          action
-          image
-          seen
-          doctormodelID
-          patientmodelID
-          createdAt
-          receipientDeviceToken
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-          __typename
-        }
         nextToken
-        startedAt
         __typename
       }
       PatientVideoCalls {
-        items {
-          id
-          channelName
-          patientmodelID
-          doctormodelID
-          subscriberDeviceToken
-          createdAt
-          picked
-          expiryTime
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-          __typename
-        }
         nextToken
-        startedAt
         __typename
       }
       PatientAppointments {
-        items {
-          id
-          consultationtype
-          starthour
-          endhour
-          day
-          month
-          date
-          timeframe
-          shortnote
-          category
-          status
-          countdown
-          doctormodelID
-          patientmodelID
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-          __typename
-        }
         nextToken
-        startedAt
         __typename
       }
       PatientReviews {
-        items {
-          id
-          reviewtext
-          ratings
-          patientmodelID
-          doctormodelID
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-          __typename
-        }
         nextToken
-        startedAt
         __typename
       }
       createdAt
       updatedAt
-      _version
-      _deleted
-      _lastChangedAt
       patientModelChatParticipantId
       __typename
     }
@@ -3970,251 +1092,30 @@ export const onDeletePatientModel = /* GraphQL */ `
         patientmodelID
         doctormodelID
         chatroomID
-        patient {
-          id
-          firstname
-          lastname
-          birthdate
-          email
-          homeaddress
-          country
-          city
-          race
-          gender
-          smokingstatus
-          drinkingstatus
-          disability
-          image
-          status
-          agreedtoterms
-          basicinfocompletion
-          medicalinfocompletion
-          devicetoken
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-          patientModelChatParticipantId
-          __typename
-        }
-        doctor {
-          id
-          firstname
-          lastname
-          email
-          country
-          city
-          license
-          specialization
-          experience
-          workplace
-          workAddress
-          workContact
-          about
-          image
-          status
-          qualifications
-          averagerating
-          ratings
-          basicinfocompletion
-          specialistinfocompletion
-          workinfocompletion
-          makePublic
-          confirmed
-          devicetoken
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-          doctorModelChatParticipantId
-          __typename
-        }
-        chatroom {
-          id
-          name
-          image
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-          chatRoomLastMessageId
-          owner
-          __typename
-        }
-        messages {
-          nextToken
-          startedAt
-          __typename
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
         owner
         __typename
       }
       notifications {
-        items {
-          id
-          title
-          contentMessage
-          sourceType
-          navigationID
-          action
-          image
-          seen
-          doctormodelID
-          patientmodelID
-          createdAt
-          receipientDeviceToken
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-          __typename
-        }
         nextToken
-        startedAt
         __typename
       }
       PatientVideoCalls {
-        items {
-          id
-          channelName
-          patientmodelID
-          doctormodelID
-          subscriberDeviceToken
-          createdAt
-          picked
-          expiryTime
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-          __typename
-        }
         nextToken
-        startedAt
         __typename
       }
       PatientAppointments {
-        items {
-          id
-          consultationtype
-          starthour
-          endhour
-          day
-          month
-          date
-          timeframe
-          shortnote
-          category
-          status
-          countdown
-          doctormodelID
-          patientmodelID
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-          __typename
-        }
         nextToken
-        startedAt
         __typename
       }
       PatientReviews {
-        items {
-          id
-          reviewtext
-          ratings
-          patientmodelID
-          doctormodelID
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-          __typename
-        }
         nextToken
-        startedAt
         __typename
       }
       createdAt
       updatedAt
-      _version
-      _deleted
-      _lastChangedAt
       patientModelChatParticipantId
-      __typename
-    }
-  }
-`;
-export const onCreateDayTimeModel = /* GraphQL */ `
-  subscription OnCreateDayTimeModel(
-    $filter: ModelSubscriptionDayTimeModelFilterInput
-    $owner: String
-  ) {
-    onCreateDayTimeModel(filter: $filter, owner: $owner) {
-      id
-      day
-      starthour
-      endhour
-      doctormodelID
-      createdAt
-      updatedAt
-      _version
-      _deleted
-      _lastChangedAt
-      owner
-      __typename
-    }
-  }
-`;
-export const onUpdateDayTimeModel = /* GraphQL */ `
-  subscription OnUpdateDayTimeModel(
-    $filter: ModelSubscriptionDayTimeModelFilterInput
-    $owner: String
-  ) {
-    onUpdateDayTimeModel(filter: $filter, owner: $owner) {
-      id
-      day
-      starthour
-      endhour
-      doctormodelID
-      createdAt
-      updatedAt
-      _version
-      _deleted
-      _lastChangedAt
-      owner
-      __typename
-    }
-  }
-`;
-export const onDeleteDayTimeModel = /* GraphQL */ `
-  subscription OnDeleteDayTimeModel(
-    $filter: ModelSubscriptionDayTimeModelFilterInput
-    $owner: String
-  ) {
-    onDeleteDayTimeModel(filter: $filter, owner: $owner) {
-      id
-      day
-      starthour
-      endhour
-      doctormodelID
-      createdAt
-      updatedAt
-      _version
-      _deleted
-      _lastChangedAt
-      owner
       __typename
     }
   }
@@ -4253,245 +1154,41 @@ export const onCreateDoctorModel = /* GraphQL */ `
         patientmodelID
         doctormodelID
         chatroomID
-        patient {
-          id
-          firstname
-          lastname
-          birthdate
-          email
-          homeaddress
-          country
-          city
-          race
-          gender
-          smokingstatus
-          drinkingstatus
-          disability
-          image
-          status
-          agreedtoterms
-          basicinfocompletion
-          medicalinfocompletion
-          devicetoken
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-          patientModelChatParticipantId
-          __typename
-        }
-        doctor {
-          id
-          firstname
-          lastname
-          email
-          country
-          city
-          license
-          specialization
-          experience
-          workplace
-          workAddress
-          workContact
-          about
-          image
-          status
-          qualifications
-          averagerating
-          ratings
-          basicinfocompletion
-          specialistinfocompletion
-          workinfocompletion
-          makePublic
-          confirmed
-          devicetoken
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-          doctorModelChatParticipantId
-          __typename
-        }
-        chatroom {
-          id
-          name
-          image
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-          chatRoomLastMessageId
-          owner
-          __typename
-        }
-        messages {
-          nextToken
-          startedAt
-          __typename
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
         owner
         __typename
       }
       notifications {
-        items {
-          id
-          title
-          contentMessage
-          sourceType
-          navigationID
-          action
-          image
-          seen
-          doctormodelID
-          patientmodelID
-          createdAt
-          receipientDeviceToken
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-          __typename
-        }
         nextToken
-        startedAt
         __typename
       }
       DoctorDayTimeModel {
-        items {
-          id
-          day
-          starthour
-          endhour
-          doctormodelID
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-          owner
-          __typename
-        }
         nextToken
-        startedAt
         __typename
       }
       DoctorConFeeModels {
-        items {
-          id
-          rateperminute
-          timeframe
-          consultationtype
-          doctormodelID
-          rate
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-          owner
-          __typename
-        }
         nextToken
-        startedAt
         __typename
       }
       DoctorVideoCalls {
-        items {
-          id
-          channelName
-          patientmodelID
-          doctormodelID
-          subscriberDeviceToken
-          createdAt
-          picked
-          expiryTime
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-          __typename
-        }
         nextToken
-        startedAt
         __typename
       }
       DoctorAppointments {
-        items {
-          id
-          consultationtype
-          starthour
-          endhour
-          day
-          month
-          date
-          timeframe
-          shortnote
-          category
-          status
-          countdown
-          doctormodelID
-          patientmodelID
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-          __typename
-        }
         nextToken
-        startedAt
         __typename
       }
       DoctorArticles {
-        items {
-          id
-          title
-          contentMessage
-          image
-          doctormodelID
-          createdAt
-          categories
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-          __typename
-        }
         nextToken
-        startedAt
         __typename
       }
       Reviews {
-        items {
-          id
-          reviewtext
-          ratings
-          patientmodelID
-          doctormodelID
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-          __typename
-        }
         nextToken
-        startedAt
         __typename
       }
       createdAt
       updatedAt
-      _version
-      _deleted
-      _lastChangedAt
       doctorModelChatParticipantId
       __typename
     }
@@ -4531,245 +1228,41 @@ export const onUpdateDoctorModel = /* GraphQL */ `
         patientmodelID
         doctormodelID
         chatroomID
-        patient {
-          id
-          firstname
-          lastname
-          birthdate
-          email
-          homeaddress
-          country
-          city
-          race
-          gender
-          smokingstatus
-          drinkingstatus
-          disability
-          image
-          status
-          agreedtoterms
-          basicinfocompletion
-          medicalinfocompletion
-          devicetoken
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-          patientModelChatParticipantId
-          __typename
-        }
-        doctor {
-          id
-          firstname
-          lastname
-          email
-          country
-          city
-          license
-          specialization
-          experience
-          workplace
-          workAddress
-          workContact
-          about
-          image
-          status
-          qualifications
-          averagerating
-          ratings
-          basicinfocompletion
-          specialistinfocompletion
-          workinfocompletion
-          makePublic
-          confirmed
-          devicetoken
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-          doctorModelChatParticipantId
-          __typename
-        }
-        chatroom {
-          id
-          name
-          image
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-          chatRoomLastMessageId
-          owner
-          __typename
-        }
-        messages {
-          nextToken
-          startedAt
-          __typename
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
         owner
         __typename
       }
       notifications {
-        items {
-          id
-          title
-          contentMessage
-          sourceType
-          navigationID
-          action
-          image
-          seen
-          doctormodelID
-          patientmodelID
-          createdAt
-          receipientDeviceToken
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-          __typename
-        }
         nextToken
-        startedAt
         __typename
       }
       DoctorDayTimeModel {
-        items {
-          id
-          day
-          starthour
-          endhour
-          doctormodelID
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-          owner
-          __typename
-        }
         nextToken
-        startedAt
         __typename
       }
       DoctorConFeeModels {
-        items {
-          id
-          rateperminute
-          timeframe
-          consultationtype
-          doctormodelID
-          rate
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-          owner
-          __typename
-        }
         nextToken
-        startedAt
         __typename
       }
       DoctorVideoCalls {
-        items {
-          id
-          channelName
-          patientmodelID
-          doctormodelID
-          subscriberDeviceToken
-          createdAt
-          picked
-          expiryTime
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-          __typename
-        }
         nextToken
-        startedAt
         __typename
       }
       DoctorAppointments {
-        items {
-          id
-          consultationtype
-          starthour
-          endhour
-          day
-          month
-          date
-          timeframe
-          shortnote
-          category
-          status
-          countdown
-          doctormodelID
-          patientmodelID
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-          __typename
-        }
         nextToken
-        startedAt
         __typename
       }
       DoctorArticles {
-        items {
-          id
-          title
-          contentMessage
-          image
-          doctormodelID
-          createdAt
-          categories
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-          __typename
-        }
         nextToken
-        startedAt
         __typename
       }
       Reviews {
-        items {
-          id
-          reviewtext
-          ratings
-          patientmodelID
-          doctormodelID
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-          __typename
-        }
         nextToken
-        startedAt
         __typename
       }
       createdAt
       updatedAt
-      _version
-      _deleted
-      _lastChangedAt
       doctorModelChatParticipantId
       __typename
     }
@@ -4809,246 +1302,759 @@ export const onDeleteDoctorModel = /* GraphQL */ `
         patientmodelID
         doctormodelID
         chatroomID
-        patient {
-          id
-          firstname
-          lastname
-          birthdate
-          email
-          homeaddress
-          country
-          city
-          race
-          gender
-          smokingstatus
-          drinkingstatus
-          disability
-          image
-          status
-          agreedtoterms
-          basicinfocompletion
-          medicalinfocompletion
-          devicetoken
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-          patientModelChatParticipantId
-          __typename
-        }
-        doctor {
-          id
-          firstname
-          lastname
-          email
-          country
-          city
-          license
-          specialization
-          experience
-          workplace
-          workAddress
-          workContact
-          about
-          image
-          status
-          qualifications
-          averagerating
-          ratings
-          basicinfocompletion
-          specialistinfocompletion
-          workinfocompletion
-          makePublic
-          confirmed
-          devicetoken
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-          doctorModelChatParticipantId
-          __typename
-        }
-        chatroom {
-          id
-          name
-          image
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-          chatRoomLastMessageId
-          owner
-          __typename
-        }
-        messages {
-          nextToken
-          startedAt
-          __typename
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
         owner
         __typename
       }
       notifications {
-        items {
-          id
-          title
-          contentMessage
-          sourceType
-          navigationID
-          action
-          image
-          seen
-          doctormodelID
-          patientmodelID
-          createdAt
-          receipientDeviceToken
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-          __typename
-        }
         nextToken
-        startedAt
         __typename
       }
       DoctorDayTimeModel {
-        items {
-          id
-          day
-          starthour
-          endhour
-          doctormodelID
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-          owner
-          __typename
-        }
         nextToken
-        startedAt
         __typename
       }
       DoctorConFeeModels {
-        items {
-          id
-          rateperminute
-          timeframe
-          consultationtype
-          doctormodelID
-          rate
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-          owner
-          __typename
-        }
         nextToken
-        startedAt
         __typename
       }
       DoctorVideoCalls {
-        items {
-          id
-          channelName
-          patientmodelID
-          doctormodelID
-          subscriberDeviceToken
-          createdAt
-          picked
-          expiryTime
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-          __typename
-        }
         nextToken
-        startedAt
         __typename
       }
       DoctorAppointments {
-        items {
-          id
-          consultationtype
-          starthour
-          endhour
-          day
-          month
-          date
-          timeframe
-          shortnote
-          category
-          status
-          countdown
-          doctormodelID
-          patientmodelID
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-          __typename
-        }
         nextToken
-        startedAt
         __typename
       }
       DoctorArticles {
-        items {
-          id
-          title
-          contentMessage
-          image
-          doctormodelID
-          createdAt
-          categories
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-          __typename
-        }
         nextToken
-        startedAt
         __typename
       }
       Reviews {
-        items {
-          id
-          reviewtext
-          ratings
-          patientmodelID
-          doctormodelID
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-          __typename
-        }
         nextToken
-        startedAt
         __typename
       }
       createdAt
       updatedAt
-      _version
-      _deleted
-      _lastChangedAt
       doctorModelChatParticipantId
+      __typename
+    }
+  }
+`;
+export const onCreateTransaction = /* GraphQL */ `
+  subscription OnCreateTransaction(
+    $filter: ModelSubscriptionTransactionFilterInput
+    $owner: String
+  ) {
+    onCreateTransaction(filter: $filter, owner: $owner) {
+      id
+      message
+      category
+      status
+      amount
+      type
+      currency
+      transactiontype
+      sender
+      receiver
+      createdAt
+      updatedAt
+      owner
+      __typename
+    }
+  }
+`;
+export const onUpdateTransaction = /* GraphQL */ `
+  subscription OnUpdateTransaction(
+    $filter: ModelSubscriptionTransactionFilterInput
+    $owner: String
+  ) {
+    onUpdateTransaction(filter: $filter, owner: $owner) {
+      id
+      message
+      category
+      status
+      amount
+      type
+      currency
+      transactiontype
+      sender
+      receiver
+      createdAt
+      updatedAt
+      owner
+      __typename
+    }
+  }
+`;
+export const onDeleteTransaction = /* GraphQL */ `
+  subscription OnDeleteTransaction(
+    $filter: ModelSubscriptionTransactionFilterInput
+    $owner: String
+  ) {
+    onDeleteTransaction(filter: $filter, owner: $owner) {
+      id
+      message
+      category
+      status
+      amount
+      type
+      currency
+      transactiontype
+      sender
+      receiver
+      createdAt
+      updatedAt
+      owner
+      __typename
+    }
+  }
+`;
+export const onCreateWallet = /* GraphQL */ `
+  subscription OnCreateWallet(
+    $filter: ModelSubscriptionWalletFilterInput
+    $owner: String
+  ) {
+    onCreateWallet(filter: $filter, owner: $owner) {
+      id
+      ownerID
+      accountNumber
+      accountName
+      createdAt
+      updatedAt
+      owner
+      __typename
+    }
+  }
+`;
+export const onUpdateWallet = /* GraphQL */ `
+  subscription OnUpdateWallet(
+    $filter: ModelSubscriptionWalletFilterInput
+    $owner: String
+  ) {
+    onUpdateWallet(filter: $filter, owner: $owner) {
+      id
+      ownerID
+      accountNumber
+      accountName
+      createdAt
+      updatedAt
+      owner
+      __typename
+    }
+  }
+`;
+export const onDeleteWallet = /* GraphQL */ `
+  subscription OnDeleteWallet(
+    $filter: ModelSubscriptionWalletFilterInput
+    $owner: String
+  ) {
+    onDeleteWallet(filter: $filter, owner: $owner) {
+      id
+      ownerID
+      accountNumber
+      accountName
+      createdAt
+      updatedAt
+      owner
+      __typename
+    }
+  }
+`;
+export const onCreateChatRoom = /* GraphQL */ `
+  subscription OnCreateChatRoom(
+    $filter: ModelSubscriptionChatRoomFilterInput
+    $owner: String
+  ) {
+    onCreateChatRoom(filter: $filter, owner: $owner) {
+      id
+      name
+      image
+      participants {
+        nextToken
+        __typename
+      }
+      messages {
+        nextToken
+        __typename
+      }
+      lastMessage {
+        id
+        text
+        createdAt
+        chatroomID
+        senderID
+        seen
+        images
+        updatedAt
+        owner
+        __typename
+      }
+      createdAt
+      updatedAt
+      chatRoomLastMessageId
+      owner
+      __typename
+    }
+  }
+`;
+export const onUpdateChatRoom = /* GraphQL */ `
+  subscription OnUpdateChatRoom(
+    $filter: ModelSubscriptionChatRoomFilterInput
+    $owner: String
+  ) {
+    onUpdateChatRoom(filter: $filter, owner: $owner) {
+      id
+      name
+      image
+      participants {
+        nextToken
+        __typename
+      }
+      messages {
+        nextToken
+        __typename
+      }
+      lastMessage {
+        id
+        text
+        createdAt
+        chatroomID
+        senderID
+        seen
+        images
+        updatedAt
+        owner
+        __typename
+      }
+      createdAt
+      updatedAt
+      chatRoomLastMessageId
+      owner
+      __typename
+    }
+  }
+`;
+export const onDeleteChatRoom = /* GraphQL */ `
+  subscription OnDeleteChatRoom(
+    $filter: ModelSubscriptionChatRoomFilterInput
+    $owner: String
+  ) {
+    onDeleteChatRoom(filter: $filter, owner: $owner) {
+      id
+      name
+      image
+      participants {
+        nextToken
+        __typename
+      }
+      messages {
+        nextToken
+        __typename
+      }
+      lastMessage {
+        id
+        text
+        createdAt
+        chatroomID
+        senderID
+        seen
+        images
+        updatedAt
+        owner
+        __typename
+      }
+      createdAt
+      updatedAt
+      chatRoomLastMessageId
+      owner
+      __typename
+    }
+  }
+`;
+export const onCreateMessage = /* GraphQL */ `
+  subscription OnCreateMessage(
+    $filter: ModelSubscriptionMessageFilterInput
+    $owner: String
+  ) {
+    onCreateMessage(filter: $filter, owner: $owner) {
+      id
+      text
+      createdAt
+      chatroomID
+      chatroom {
+        id
+        name
+        image
+        createdAt
+        updatedAt
+        chatRoomLastMessageId
+        owner
+        __typename
+      }
+      senderID
+      sender {
+        id
+        patientmodelID
+        doctormodelID
+        chatroomID
+        createdAt
+        updatedAt
+        owner
+        __typename
+      }
+      seen
+      images
+      updatedAt
+      owner
+      __typename
+    }
+  }
+`;
+export const onUpdateMessage = /* GraphQL */ `
+  subscription OnUpdateMessage(
+    $filter: ModelSubscriptionMessageFilterInput
+    $owner: String
+  ) {
+    onUpdateMessage(filter: $filter, owner: $owner) {
+      id
+      text
+      createdAt
+      chatroomID
+      chatroom {
+        id
+        name
+        image
+        createdAt
+        updatedAt
+        chatRoomLastMessageId
+        owner
+        __typename
+      }
+      senderID
+      sender {
+        id
+        patientmodelID
+        doctormodelID
+        chatroomID
+        createdAt
+        updatedAt
+        owner
+        __typename
+      }
+      seen
+      images
+      updatedAt
+      owner
+      __typename
+    }
+  }
+`;
+export const onDeleteMessage = /* GraphQL */ `
+  subscription OnDeleteMessage(
+    $filter: ModelSubscriptionMessageFilterInput
+    $owner: String
+  ) {
+    onDeleteMessage(filter: $filter, owner: $owner) {
+      id
+      text
+      createdAt
+      chatroomID
+      chatroom {
+        id
+        name
+        image
+        createdAt
+        updatedAt
+        chatRoomLastMessageId
+        owner
+        __typename
+      }
+      senderID
+      sender {
+        id
+        patientmodelID
+        doctormodelID
+        chatroomID
+        createdAt
+        updatedAt
+        owner
+        __typename
+      }
+      seen
+      images
+      updatedAt
+      owner
+      __typename
+    }
+  }
+`;
+export const onCreateChatParticipant = /* GraphQL */ `
+  subscription OnCreateChatParticipant(
+    $filter: ModelSubscriptionChatParticipantFilterInput
+    $owner: String
+  ) {
+    onCreateChatParticipant(filter: $filter, owner: $owner) {
+      id
+      patientmodelID
+      doctormodelID
+      chatroomID
+      patient {
+        id
+        firstname
+        lastname
+        birthdate
+        email
+        homeaddress
+        country
+        city
+        race
+        gender
+        smokingstatus
+        drinkingstatus
+        disability
+        image
+        status
+        agreedtoterms
+        basicinfocompletion
+        medicalinfocompletion
+        devicetoken
+        createdAt
+        updatedAt
+        patientModelChatParticipantId
+        __typename
+      }
+      doctor {
+        id
+        firstname
+        lastname
+        email
+        country
+        city
+        license
+        specialization
+        experience
+        workplace
+        workAddress
+        workContact
+        about
+        image
+        status
+        qualifications
+        averagerating
+        ratings
+        basicinfocompletion
+        specialistinfocompletion
+        workinfocompletion
+        makePublic
+        confirmed
+        devicetoken
+        createdAt
+        updatedAt
+        doctorModelChatParticipantId
+        __typename
+      }
+      chatroom {
+        id
+        name
+        image
+        createdAt
+        updatedAt
+        chatRoomLastMessageId
+        owner
+        __typename
+      }
+      messages {
+        nextToken
+        __typename
+      }
+      createdAt
+      updatedAt
+      owner
+      __typename
+    }
+  }
+`;
+export const onUpdateChatParticipant = /* GraphQL */ `
+  subscription OnUpdateChatParticipant(
+    $filter: ModelSubscriptionChatParticipantFilterInput
+    $owner: String
+  ) {
+    onUpdateChatParticipant(filter: $filter, owner: $owner) {
+      id
+      patientmodelID
+      doctormodelID
+      chatroomID
+      patient {
+        id
+        firstname
+        lastname
+        birthdate
+        email
+        homeaddress
+        country
+        city
+        race
+        gender
+        smokingstatus
+        drinkingstatus
+        disability
+        image
+        status
+        agreedtoterms
+        basicinfocompletion
+        medicalinfocompletion
+        devicetoken
+        createdAt
+        updatedAt
+        patientModelChatParticipantId
+        __typename
+      }
+      doctor {
+        id
+        firstname
+        lastname
+        email
+        country
+        city
+        license
+        specialization
+        experience
+        workplace
+        workAddress
+        workContact
+        about
+        image
+        status
+        qualifications
+        averagerating
+        ratings
+        basicinfocompletion
+        specialistinfocompletion
+        workinfocompletion
+        makePublic
+        confirmed
+        devicetoken
+        createdAt
+        updatedAt
+        doctorModelChatParticipantId
+        __typename
+      }
+      chatroom {
+        id
+        name
+        image
+        createdAt
+        updatedAt
+        chatRoomLastMessageId
+        owner
+        __typename
+      }
+      messages {
+        nextToken
+        __typename
+      }
+      createdAt
+      updatedAt
+      owner
+      __typename
+    }
+  }
+`;
+export const onDeleteChatParticipant = /* GraphQL */ `
+  subscription OnDeleteChatParticipant(
+    $filter: ModelSubscriptionChatParticipantFilterInput
+    $owner: String
+  ) {
+    onDeleteChatParticipant(filter: $filter, owner: $owner) {
+      id
+      patientmodelID
+      doctormodelID
+      chatroomID
+      patient {
+        id
+        firstname
+        lastname
+        birthdate
+        email
+        homeaddress
+        country
+        city
+        race
+        gender
+        smokingstatus
+        drinkingstatus
+        disability
+        image
+        status
+        agreedtoterms
+        basicinfocompletion
+        medicalinfocompletion
+        devicetoken
+        createdAt
+        updatedAt
+        patientModelChatParticipantId
+        __typename
+      }
+      doctor {
+        id
+        firstname
+        lastname
+        email
+        country
+        city
+        license
+        specialization
+        experience
+        workplace
+        workAddress
+        workContact
+        about
+        image
+        status
+        qualifications
+        averagerating
+        ratings
+        basicinfocompletion
+        specialistinfocompletion
+        workinfocompletion
+        makePublic
+        confirmed
+        devicetoken
+        createdAt
+        updatedAt
+        doctorModelChatParticipantId
+        __typename
+      }
+      chatroom {
+        id
+        name
+        image
+        createdAt
+        updatedAt
+        chatRoomLastMessageId
+        owner
+        __typename
+      }
+      messages {
+        nextToken
+        __typename
+      }
+      createdAt
+      updatedAt
+      owner
+      __typename
+    }
+  }
+`;
+export const onCreateDayTimeModel = /* GraphQL */ `
+  subscription OnCreateDayTimeModel(
+    $filter: ModelSubscriptionDayTimeModelFilterInput
+    $owner: String
+  ) {
+    onCreateDayTimeModel(filter: $filter, owner: $owner) {
+      id
+      day
+      starthour
+      endhour
+      doctormodelID
+      createdAt
+      updatedAt
+      owner
+      __typename
+    }
+  }
+`;
+export const onUpdateDayTimeModel = /* GraphQL */ `
+  subscription OnUpdateDayTimeModel(
+    $filter: ModelSubscriptionDayTimeModelFilterInput
+    $owner: String
+  ) {
+    onUpdateDayTimeModel(filter: $filter, owner: $owner) {
+      id
+      day
+      starthour
+      endhour
+      doctormodelID
+      createdAt
+      updatedAt
+      owner
+      __typename
+    }
+  }
+`;
+export const onDeleteDayTimeModel = /* GraphQL */ `
+  subscription OnDeleteDayTimeModel(
+    $filter: ModelSubscriptionDayTimeModelFilterInput
+    $owner: String
+  ) {
+    onDeleteDayTimeModel(filter: $filter, owner: $owner) {
+      id
+      day
+      starthour
+      endhour
+      doctormodelID
+      createdAt
+      updatedAt
+      owner
+      __typename
+    }
+  }
+`;
+export const onCreateConsultationFeeModel = /* GraphQL */ `
+  subscription OnCreateConsultationFeeModel(
+    $filter: ModelSubscriptionConsultationFeeModelFilterInput
+    $owner: String
+  ) {
+    onCreateConsultationFeeModel(filter: $filter, owner: $owner) {
+      id
+      rateperminute
+      timeframe
+      consultationtype
+      doctormodelID
+      rate
+      createdAt
+      updatedAt
+      owner
+      __typename
+    }
+  }
+`;
+export const onUpdateConsultationFeeModel = /* GraphQL */ `
+  subscription OnUpdateConsultationFeeModel(
+    $filter: ModelSubscriptionConsultationFeeModelFilterInput
+    $owner: String
+  ) {
+    onUpdateConsultationFeeModel(filter: $filter, owner: $owner) {
+      id
+      rateperminute
+      timeframe
+      consultationtype
+      doctormodelID
+      rate
+      createdAt
+      updatedAt
+      owner
+      __typename
+    }
+  }
+`;
+export const onDeleteConsultationFeeModel = /* GraphQL */ `
+  subscription OnDeleteConsultationFeeModel(
+    $filter: ModelSubscriptionConsultationFeeModelFilterInput
+    $owner: String
+  ) {
+    onDeleteConsultationFeeModel(filter: $filter, owner: $owner) {
+      id
+      rateperminute
+      timeframe
+      consultationtype
+      doctormodelID
+      rate
+      createdAt
+      updatedAt
+      owner
       __typename
     }
   }
