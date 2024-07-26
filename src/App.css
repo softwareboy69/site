@@ -247,19 +247,17 @@
 
 .practitioner {
   display: flex;
-  box-shadow: -10px 10px #9CD9FF; /* Adjust the values as needed */
+  box-shadow: -10px 10px #9cd9ff; /* Adjust the values as needed */
   padding: 56px 32px 1px 32px;
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
   border-radius: 16px;
-  background: #F1F9FE;
+  background: #f1f9fe;
   height: 624px;
   width: 624px;
   /* margin-left: 50px; */
 }
-
-
 
 .facility {
   display: flex;
@@ -878,7 +876,11 @@ button:hover {
 .location {
   padding-left: 150px;
 }
-
+.location > text {
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+}
 @media (max-width: 525px) {
   .container {
     display: flex;
@@ -1089,7 +1091,7 @@ button:hover {
     justify-content: flex-start;
     align-items: flex-start;
     border-radius: 16px;
-    background: #F1F9FE;
+    background: #f1f9fe;
     height: 60vh;
     width: 90vw;
   }
@@ -1529,7 +1531,6 @@ button:hover {
     border-radius: 12px;
   }
 
-
   .footerdownloadtext {
     display: block;
     color: #0a1f42;
@@ -1661,7 +1662,7 @@ button:hover {
     width: 100vw;
     flex-direction: row;
     flex-wrap: wrap;
-    align-items: center ;
+    align-items: center;
     justify-content: center;
     display: flex;
   }
@@ -1681,7 +1682,7 @@ button:hover {
     width: 36vw;
     height: 350px;
   }
-  
+
   .phones2 {
     width: 36vw;
     height: 340px;
@@ -1695,7 +1696,7 @@ button:hover {
     display: flex;
     flex-direction: column;
   }
-  
+
   .letter-header {
     color: #0a1f42;
     font-family: Inter;
@@ -1742,8 +1743,11 @@ button:hover {
     align-items: center;
   }
 
-
-.location {
-  padding-left: 20px;
-}
+  .location {
+    padding-left: 20px;
+  }
+  .location > text {
+    width: 100%;
+    display: block;
+  }
 }
