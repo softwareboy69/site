@@ -144,6 +144,12 @@ const FooterPage = () => {
             <Link className="support-text2" to="/Note">
               Investors
             </Link>
+            <Link
+              className="support-text2"
+              to="https://hospiyou-investors.com/"
+            >
+              Invest Now
+            </Link>
           </div>
         </div>
         <div className="footer-download">
@@ -174,17 +180,26 @@ const FooterPage = () => {
         }}
       >
         <div className="location">
-          <text style={{ fontSize: 18, }}>
-            22 Road 7 Havana Estate,
+          <text style={{ fontSize: 18 }}>
+            <div>
+              651 N Broad St <br />
+              Suite 201
+              <br /> city of Middletown
+              <br /> zip code 19709
+              <br /> county of New Castle. <br />
+              USA
+            </div>
             <br />
-            Sars Road, Rupokwu,
+            <div>
+              22 Road 7 Havana Estate,
+              <br />
+              Sars Road, Rupokwu,
+              <br />
+              Port Harcourt, Nigeria.{" "}
+            </div>
             <br />
-            Port Harcourt, Nigeria.
-            <br />
-            <br />
-            Contact: +2347037432078
           </text>
-
+          <p style={{ fontSize: 18 }}>Contact: +2347037432078</p>
         </div>
       </div>
     </div>
