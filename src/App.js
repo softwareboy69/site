@@ -13,8 +13,7 @@ import AboutPage from "./pages/aboutpage";
 import FooterPage from "./pages/footerpage";
 import Note from "./pages/note";
 import DoctorsForm from "./pages/DoctorsForm";
-
-
+import NutritionForm from "./pages/Gift/NutritionForm";
 
 function Homepage() {
   return (
@@ -27,7 +26,7 @@ function Homepage() {
       <OurGoal />
       <ServicePage />
       <AboutPage />
-      <FooterPage /> 
+      <FooterPage />
     </div>
   );
 }
@@ -39,6 +38,7 @@ function App() {
         <Route path="/" exact element={<Homepage />} />
         <Route path="/note" element={<Note />} />
         <Route path="/doctorsform" element={<DoctorsForm />} />
+        <Route path="/nutritionform" element={<NutritionForm />} />
       </Routes>
     </BrowserRouter>
   );
