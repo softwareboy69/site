@@ -14,6 +14,7 @@ import FooterPage from "./pages/footerpage";
 import Note from "./pages/note";
 import DoctorsForm from "./pages/DoctorsForm";
 import NutritionForm from "./pages/Gift/NutritionForm";
+import Privacy from "./pages/privacy/privacy";
 
 function Homepage() {
   return (
@@ -39,6 +40,7 @@ function App() {
         <Route path="/note" element={<Note />} />
         <Route path="/doctorsform" element={<DoctorsForm />} />
         <Route path="/nutritionform" element={<NutritionForm />} />
+        <Route path="/privacy" element={<Privacy />} />
       </Routes>
     </BrowserRouter>
   );
