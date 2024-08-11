@@ -232,7 +232,7 @@ const Privacy = () => {
             Address: 651 N Broad St Suite 201, City of Middletown, Zip Code
             19709, County of New Castle, USA
           </li>
-          <li>Phone: +234703743207, +2348165090923</li>
+          <li>Phone: +2347037432078, +2348165090923</li>
         </ul>
 
         <p>
