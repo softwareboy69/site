@@ -1,5 +1,5 @@
 import React from "react";
-// import apple from "../images/apple-icon.png";
+import apple from "../images/apple-icon.png";
 import android from "../images/playstore-icon.png";
 import list from "../images/list.svg";
 import iphone15 from "../images/iphone15.png";
@@ -7,24 +7,28 @@ import halfphone from "../images/halfphone.png";
 import listpc from "../images/listpc.svg";
 
 const ServicePage = () => {
-
   const playstoredownload = () => {
-    window.location.href = "https://play.google.com/store/apps/details?id=com.hospiyou"
-  }
+    window.location.href =
+      "https://play.google.com/store/apps/details?id=com.hospiyou";
+  };
+  const appstoredownload = () => {
+    window.location.href =
+      "https://apps.apple.com/bg/app/hospiyou/id6504822148";
+  };
 
   return (
-    <div id='services' className="services">
+    <div id="services" className="services">
       <text className="unique">Our unique services</text>
       <text className="following">
         Following the launch of our mobile app, here are some unique services we
         offer
       </text>
-      <div className="downloaddivtwo">
-        {/* <button className="downloadbutton">
+      <div className="downloaddiv" onClick={appstoredownload}>
+        <button className="downloadbutton">
           <img src={apple} alt="appleicon" className="icon-style" />
           <text className="downloadtext">Get app on Apple store</text>
-        </button> */}
-        <button className="downloadbutton" onClick={playstoredownload} >
+        </button>
+        <button className="downloadbutton" onClick={playstoredownload}>
           <img src={android} alt="playstoreicon" className="icon-style" />
           <text className="downloadtext">Get app on Play store</text>
         </button>
