@@ -3,19 +3,23 @@ import brandlogo from "../images/brandlogo.png";
 import { HashLink } from "react-router-hash-link";
 
 const HeaderPage = () => {
-
   const playstoredownload = () => {
-    window.location.href = "https://play.google.com/store/apps/details?id=com.hospiyou"
-  }
+    window.location.href =
+      "https://play.google.com/store/apps/details?id=com.hospiyou";
+  };
 
   const returnhome = () => {
-    window.location.href = "https://hospiyou.com"
-
-  }
+    window.location.href = "https://hospiyou.com";
+  };
 
   return (
     <div className="header">
-      <img src={brandlogo} alt="brand" className="brandpic" onClick={returnhome} />
+      <img
+        src={brandlogo}
+        alt="brand"
+        className="brandpic"
+        onClick={returnhome}
+      />
       <ul className="nav">
         <li className="nav-button">
           <HashLink smooth to="/#goals">
@@ -29,7 +33,7 @@ const HeaderPage = () => {
           </HashLink>
         </li>
         <li className="nav-button">
-        <HashLink smooth to="/#about">
+          <HashLink smooth to="/#about">
             About
           </HashLink>
         </li>
