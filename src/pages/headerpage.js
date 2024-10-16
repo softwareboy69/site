@@ -1,6 +1,7 @@
 import React from "react";
 import brandlogo from "../images/brandlogo.png";
 import { HashLink } from "react-router-hash-link";
+import { Link } from "react-router-dom";
 
 const HeaderPage = () => {
   const playstoredownload = () => {
@@ -31,6 +32,11 @@ const HeaderPage = () => {
           <HashLink smooth to="/#services">
             Our services
           </HashLink>
+        </li>
+        <li className="nav-button">
+          <Link to="https://hospiyoucom.wordpress.com/">
+            Blog & Medical Articles
+          </Link>
         </li>
         <li className="nav-button">
           <HashLink smooth to="/#about">
