@@ -108,6 +108,8 @@ const Footer = () => {
             >
               Request Deletion of account
             </a>
+            <br />
+            <Link to="/privacy-policy">Privacy Policy</Link>
           </section>
           <section className="section-two">
             <h3 className="text-primary font-bold text-lg">Support</h3>
@@ -206,6 +208,8 @@ const Footer = () => {
               >
                 Request Deletion of account
               </a>
+              <br />
+              <Link to="/privacy-policy">Privacy Policy</Link>
             </section>
             <section className="section-three">
               <h3 className="text-primary font-bold text-lg">
