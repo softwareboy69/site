@@ -57,7 +57,7 @@ const What = () => {
           to="/what-we-offer"
           className="text-center py-1 px-3 my-5 text-white bg-blue-500 rounded-full w-fit font-medium flex items-center gap-2 hover:bg-blue-700 transition-all"
         >
-          Read More
+          Learn More
           <FontAwesomeIcon icon={faArrowRight} />
         </Link>
       </div>
