@@ -54,7 +54,7 @@ const DesktopHeader = () => {
             {
               sm: faSquareInstagram,
               gradient: true,
-              link: "https://www.instagram.com/hospiyou/?igshid=YzVkODRmOTdmMw%3D%3D",
+              link: "https://www.instagram.com/hospi_you?igsh=dG9ocm56c2JpMTN2",
             },
           ].map((item, index) => (
             <li
