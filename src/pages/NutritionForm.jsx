@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import Logo from "../assets/Logo.png";
 import Footer from "../sections/Footer";
 import ScrollAnimation from "../../ScrollAnimation";
@@ -78,7 +79,9 @@ const NutritionForm = () => {
   return (
     <ScrollAnimation animationVariants={fadeInUp}>
       <div className="form-container">
-        <img src={Logo} alt="logo" className="log" />
+        <Link to="/">
+          <img src={Logo} alt="logo" className="log" />
+        </Link>
 
         <h2 className="nutrition-text mb-3 font-bold text-xl md:mb-5 md:text-2xl">
           Personalized Nutrition Plan

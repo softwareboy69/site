@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import Logo from "../assets/Logo.png";
 import Mail from "../assets/mail.svg";
 import Phone from "../assets/tel.svg"; // Add a phone icon if needed
@@ -28,7 +29,9 @@ const DesktopHeader = () => {
           </div>
         </div>
         {/* Logo */}
-        <img src={Logo} alt="HospiYou Logo" className="w-32 h-auto" />
+        <Link to="/">
+          <img src={Logo} alt="HospiYou Logo" className="w-32 h-auto" />
+        </Link>
       </section>
 
       {/* Social Media Section */}
